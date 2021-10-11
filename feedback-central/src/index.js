@@ -2,19 +2,15 @@ import { ChakraProvider } from '@chakra-ui/react';
 import { ColorModeScript } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
-<<<<<<< HEAD
-=======
-
->>>>>>> e5db9d1d2e5713469fc7b5296904f3a0a402a88c
 import App from './App';
 
 
 ReactDOM.render(
   <React.StrictMode>
-  <ChakraProvider>
-  <ColorModeScript initialColorMode="light"></ColorModeScript>
-    <App />
-  </ChakraProvider>
+    <ChakraProvider>
+      <ColorModeScript initialColorMode="light"></ColorModeScript>
+      <App />
+    </ChakraProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
