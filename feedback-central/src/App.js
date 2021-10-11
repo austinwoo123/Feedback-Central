@@ -1,4 +1,3 @@
-
 import { VStack } from "@chakra-ui/react";
 import Login from "./components/Login";
 import { DarkModeSwitch } from "./components/DarkModeSwitch";

@@ -72,7 +72,6 @@ export default function Login() {
           Register
         </Button>
       </FormControl>
-
     </Stack>
   );
 }
