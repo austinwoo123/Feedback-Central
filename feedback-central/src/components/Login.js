@@ -23,9 +23,9 @@ export default function Login() {
         direction={isNotSmallerScreen ? "row" : "column"}
         spacing="200px"
         p={isNotSmallerScreen ? "32" : "0"}
-        alignSelf="flex-start"
+        alignSelf="center"
       ></Flex>
-      <Box mt={isNotSmallerScreen ? "0" : 16} align="flex-start">
+      <Box mt={isNotSmallerScreen ? "0" : 16} align="center">
         <Text
           color={isDark ? "gray.50" : "blue.700"}
           fontSize="5xl"
@@ -49,26 +49,26 @@ export default function Login() {
       >
         {/* <FormLabel textAlign="center">Password</FormLabel> */}
         <Input borderColor="blue.700" type="password" placeholder="Password" />
+
+        <Button
+          top="1rem"
+          width="100px"
+          left="6rem"
+          colorScheme="teal"
+          variant="outline"
+        >
+          Login
+        </Button>
+        <Button
+          top="1rem"
+          width="100px"
+          left="7rem"
+          colorScheme="teal"
+          variant="outline"
+        >
+          Register
+        </Button>
       </FormControl>
-      <Button
-        top="1rem"
-        width="100px"
-        left="8rem"
-        colorScheme="teal"
-        variant="outline"
-      >
-        Login
-      </Button>
-      <Button
-        top="1rem"
-        width="100px"
-        left="8rem"
-        colorScheme="teal"
-        variant="outline"
-        align="right"
-      >
-        Register
-      </Button>
     </Stack>
   );
 }
