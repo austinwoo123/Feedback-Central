@@ -1,4 +1,4 @@
-package com.company.FeedbackCentral.dto;
+package com.company.employeeservice.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -17,6 +17,8 @@ public class Notes {
     private String positives;
     private String needImprovement;
     private String note;
+
+
 
     public Integer getId() {
         return id;

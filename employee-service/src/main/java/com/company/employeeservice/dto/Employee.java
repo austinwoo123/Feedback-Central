@@ -1,4 +1,4 @@
-package com.company.FeedbackCentral.dto;
+package com.company.employeeservice.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
