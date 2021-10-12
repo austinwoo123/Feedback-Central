@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RefreshScope
+@CrossOrigin
 public class EmployeeServiceController {
 
     @Autowired
