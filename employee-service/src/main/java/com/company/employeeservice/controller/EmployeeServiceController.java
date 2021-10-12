@@ -7,6 +7,7 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RefreshScope
@@ -19,6 +20,17 @@ public class EmployeeServiceController {
         public List<Employee> getAllEmployees(){
         return employeeRepo.findAll();
 
+    }
+
+    @GetMapping(value = "/employee/{id}")
+    public Employee getEmployeeById(@PathVariable int id) {
+        Optional<Employee> employee = employeeRepo.findById(id);
+
+        if (!employee.isPresent()) {
+            return null;
+        }
+
+        return employee.get();
     }
 
     @PostMapping("/employee")
