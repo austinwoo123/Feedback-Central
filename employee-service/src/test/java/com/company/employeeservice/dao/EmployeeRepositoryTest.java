@@ -31,7 +31,7 @@ public class EmployeeRepositoryTest {
     private Notes notes1;
 
     Set noteSet= new HashSet<>();
-//    private Employee employee2;
+    private Employee employee2;
 
 
     @Before
@@ -53,10 +53,10 @@ public class EmployeeRepositoryTest {
         noteSet.add(notes1);
 
 
-//        employee2= new Employee();
-//        employee2.setFirstName("Alex");
-//        employee2.setLastName("Ford");
-//        employee2.setDepartment("Engineer");
+        employee2= new Employee();
+        employee2.setFirstName("Alex");
+        employee2.setLastName("Ford");
+        employee2.setDepartment("Engineer");
 
     }
 
@@ -80,7 +80,12 @@ public class EmployeeRepositoryTest {
 
         employeeRepo.save(employee1);
         employee1.setFirstName("Kevin");
-        employee1.setNotes(noteSet);
+        employee1.setLastName("Smith");
+        employee1.setDepartment("Sales");
+        employee1.setId(2);
+        notesRepo.save(notes1);
+
+
         employee1 = employeeRepo.save(employee1);
 
 
@@ -98,6 +103,17 @@ public class EmployeeRepositoryTest {
         Optional<Employee> fromRepo = employeeRepo.findById(employee1.getId());
 
         assertFalse(fromRepo.isPresent());
+    }
+
+    @Test
+    public void shouldGetAllEmployeesFromDatabase(){
+        employeeRepo.save(employee1);
+        employeeRepo.save(employee2);
+
+
+        List<Employee> employeeList = employeeRepo.findAll();
+
+        assertEquals(2, employeeList.size());
     }
 
 
