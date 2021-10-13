@@ -4,6 +4,7 @@ import com.company.employeeservice.dao.NotesRepository;
 import com.company.employeeservice.dto.Notes;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,17 +18,20 @@ public class NotesController {
     private NotesRepository notesRepo;
 
     @PostMapping("/notes")
+    @ResponseStatus(value = HttpStatus.CREATED)
     public Notes addNotes(@RequestBody Notes notes) {
         notesRepo.save(notes);
         return notes;
     }
 
     @DeleteMapping(value = "/notes/{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void deleteNotes(@PathVariable int id) {
         notesRepo.deleteById(id);
     }
 
     @PutMapping(value = "/notes/{id}")
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void updateNotes(@RequestBody Notes notes, @PathVariable int id) {
         if (notes.getId() == null) {
             notes.setId(id);

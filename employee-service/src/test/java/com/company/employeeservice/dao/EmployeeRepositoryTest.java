@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.Assert.*;
@@ -89,14 +90,15 @@ public class EmployeeRepositoryTest {
     }
 
     @Test
-    public void shouldUpdateNotesFromDatabase(){
+    public void shouldDeleteNoteAndEmployeeFromDatabase(){
+        employee1 = employeeRepo.save(employee1);
 
+        employeeRepo.deleteById(employee1.getId());
+
+        Optional<Employee> fromRepo = employeeRepo.findById(employee1.getId());
+
+        assertFalse(fromRepo.isPresent());
     }
-
-//    @Test
-//    public void shouldDeleteNoteAndEmployeeFromDatabase(){
-//
-//    }
 
 
 

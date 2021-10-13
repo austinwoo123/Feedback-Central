@@ -21,6 +21,18 @@ public class Employee {
     @OneToMany(mappedBy = "employeeId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Notes> notes;
 
+    public Employee(Integer id, String firstName, String lastName, String department, Set<Notes> notes) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+        this.notes = notes;
+    }
+
+    public Employee(){
+
+    }
+
     public Integer getId() {
         return id;
     }
