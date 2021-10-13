@@ -1,43 +1,53 @@
-import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react"
-import PropTypes from 'prop-types';
+import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 
-function AddDeleteBox({ handler }) {
+function AddDeleteBox() {
+  function waitForLoad(id, callback) {
+    var timer = setInterval(function () {
+      if (document.getElementById("add")) {
+        clearInterval(timer);
+        callback();
+      }
+    }, 100);
+  }
 
-    return (
-        <Box padding="3rem"
-            marginLeft="3rem"
-            marginTop="10rem"
-            bg="gray"
-            w="400px"
-            h="650px"
-            p={4}
-            color="white"
-            onSubmit={handler} >
+  waitForLoad("add", function () {
+    console.log("load successful, you can proceed!!");
+    document.getElementById("add").onclick = function () {
+      alert("I got clicked");
+    };
+  });
 
-            Hi ...
-
-            <FormControl id="firstName" isRequired>
-                <FormLabel>First Name</FormLabel>
-                <Input placeholder="First Name" name="First Name" />
-            </FormControl>
-            <FormControl id="lastName" isRequired>
-                <FormLabel>Last Name</FormLabel>
-                <Input placeholder="Last Name" name="Last Name" />
-            </FormControl>
-            <FormControl id="department" isRequired>
-                <FormLabel>Department</FormLabel>
-                <Input placeholder="Department" name="Department" />
-            </FormControl>
-            <div>
-                <Button colorScheme="teal" type="submit">Add</Button>
-            </div>
-        </Box>
-
-    );
-
-    AddDeleteBox.propTypes = {
-        handler: PropTypes.func.isRequired,
-    }
-
+  return (
+    <Box
+      borderRadius="25px"
+      padding="3rem"
+      marginLeft="8rem"
+      marginTop="10rem"
+      bg="teal"
+      w="400px"
+      h="650px"
+      p={4}
+      color="white"
+    >
+      <FormLabel fontSize="40px">Hello User!</FormLabel>
+      <FormControl marginTop="50px" id="firstName">
+        <FormLabel marginLeft="140px">First Name</FormLabel>
+        <Input placeholder="Enter your first name" name="First Name" />
+      </FormControl>
+      <FormControl marginTop="50px" id="lastName">
+        <FormLabel marginLeft="140px">Last Name</FormLabel>
+        <Input placeholder="Enter your last name" name="Last Name" />
+      </FormControl>
+      <FormControl marginTop="50px" id="department">
+        <FormLabel marginLeft="140px">Department</FormLabel>
+        <Input placeholder="Enter your department name" name="Department" />
+      </FormControl>
+      <div>
+        <Button id="add" marginTop="50px" marginLeft="121px" colorScheme="teal">
+          Add Employee
+        </Button>
+      </div>
+    </Box>
+  );
 }
 export default AddDeleteBox;
