@@ -1,6 +1,7 @@
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react"
+import PropTypes from 'prop-types';
 
-function AddDeleteBox() {
+function AddDeleteBox({ handler }) {
 
     return (
         <Box padding="3rem"
@@ -10,27 +11,33 @@ function AddDeleteBox() {
             w="400px"
             h="650px"
             p={4}
-            color="white" >
+            color="white"
+            onSubmit={handler} >
+
             Hi ...
 
-            <FormControl id="artist" isRequired>
+            <FormControl id="firstName" isRequired>
                 <FormLabel>First Name</FormLabel>
                 <Input placeholder="First Name" name="First Name" />
             </FormControl>
-            <FormControl id="album" isRequired>
+            <FormControl id="lastName" isRequired>
                 <FormLabel>Last Name</FormLabel>
                 <Input placeholder="Last Name" name="Last Name" />
             </FormControl>
-            <FormControl id="year" isRequired>
+            <FormControl id="department" isRequired>
                 <FormLabel>Department</FormLabel>
                 <Input placeholder="Department" name="Department" />
             </FormControl>
             <div>
-                <Button colorScheme="teal">Add</Button>
+                <Button colorScheme="teal" type="submit">Add</Button>
             </div>
         </Box>
 
-    )
+    );
+
+    AddDeleteBox.propTypes = {
+        handler: PropTypes.func.isRequired,
+    }
 
 }
 export default AddDeleteBox;

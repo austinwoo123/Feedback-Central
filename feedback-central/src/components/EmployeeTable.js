@@ -21,7 +21,7 @@ function EmployeeTable() {
 
     const queryClient = useQueryClient();
 
-    switch(status) {
+    switch (status) {
         case 'loading':
             return <Text>Loading...</Text>;
         case 'error':
@@ -39,9 +39,9 @@ function EmployeeTable() {
                     </Thead>
                     <Tbody>
                         <Tr>
-                            <Td>Austin{data[0].firstName}</Td>
-                            <Td>Woo</Td>
-                            <Td>Back-End</Td>
+                            <Td>{data[0].firstName}</Td>
+                            <Td>{data[0].lastName}</Td>
+                            <Td>{data[0].department}</Td>
                             <Td>
                                 <Button colorScheme="teal">
                                     <Link to="/view" className="nav-link active" href="./pages/View">View</Link>
@@ -88,7 +88,7 @@ function EmployeeTable() {
                             <Td>Garcia</Td>
                             <Td>Back-End</Td>
                         </Tr>
-        
+
                     </Tbody>
                     <Tfoot>
                         <Tr>
