@@ -1,6 +1,22 @@
 import { Box, Button, FormControl, FormLabel, Input } from "@chakra-ui/react";
 
 function AddDeleteBox() {
+  function waitForLoad(id, callback) {
+    var timer = setInterval(function () {
+      if (document.getElementById("add")) {
+        clearInterval(timer);
+        callback();
+      }
+    }, 100);
+  }
+
+  waitForLoad("add", function () {
+    console.log("load successful, you can proceed!!");
+    document.getElementById("add").onclick = function () {
+      alert("I got clicked");
+    };
+  });
+
   return (
     <Box
       borderRadius="25px"
@@ -27,7 +43,7 @@ function AddDeleteBox() {
         <Input placeholder="Enter your department name" name="Department" />
       </FormControl>
       <div>
-        <Button marginTop="50px" marginLeft="121px" colorScheme="teal">
+        <Button id="add" marginTop="50px" marginLeft="121px" colorScheme="teal">
           Add Employee
         </Button>
       </div>
