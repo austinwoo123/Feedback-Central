@@ -33,8 +33,8 @@ function EmployeeTable() {
           margin="auto"
           marginRight="400px"
           width="65%"
-          border="3px solid black"
           padding="10px"
+          borderRadius="25px"
         >
           <TableCaption>Employee List</TableCaption>
           <Thead>
