@@ -65,6 +65,17 @@ function EmployeeTable() {
               <Td>Marcus</Td>
               <Td>Ramirez</Td>
               <Td>Front-End</Td>
+              <Td>
+                <Button colorScheme="teal">
+                  <Link
+                    to="/view"
+                    className="nav-link active"
+                    href="./pages/View"
+                  >
+                    View
+                  </Link>
+                </Button>
+              </Td>
             </Tr>
           </Tbody>
           <Tfoot>
