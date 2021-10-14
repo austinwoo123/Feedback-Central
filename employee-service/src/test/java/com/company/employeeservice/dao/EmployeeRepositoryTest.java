@@ -30,7 +30,7 @@ public class EmployeeRepositoryTest {
     private Employee employee1;
     private Notes notes1;
 
-    Set noteSet= new HashSet<>();
+    Set<Notes> noteSet= new HashSet<>();
     private Employee employee2;
 
 
@@ -78,20 +78,27 @@ public class EmployeeRepositoryTest {
     @Test
     public void shouldUpdateEmployeeFromDatabase(){
 
+        // Save employee1 to employee table
         employeeRepo.save(employee1);
+
         employee1.setFirstName("Kevin");
         employee1.setLastName("Smith");
         employee1.setDepartment("Sales");
-        employee1.setId(2);
-        notesRepo.save(notes1);
-
+        employee1.setNotes(null);
+//        employee1.setId(2);
 
         employee1 = employeeRepo.save(employee1);
 
+//        Integer id = employee1.getId();
+//        for (Notes n : noteSet) {
+//            n.setEmployeeId(id);
+//            notesRepo.save(n);
+//        }
+//        List<Notes> fromNoteTable = notesRepo.findAll();
+//        employee1.setNotes(noteSet);
 
         Employee fromRepo = employeeRepo.findById(employee1.getId()).get();
         assertEquals(employee1, fromRepo);
-
     }
 
     @Test
