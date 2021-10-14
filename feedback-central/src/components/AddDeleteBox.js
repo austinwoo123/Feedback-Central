@@ -30,9 +30,10 @@ function AddDeleteBox() {
       padding="3rem"
       marginLeft="8rem"
       marginTop="10rem"
+      marginBottom="10rem"
       bg="teal"
-      w="600px"
-      h="650px"
+      w="1000px"
+      h="500px"
       p={4}
       color="white"
     >

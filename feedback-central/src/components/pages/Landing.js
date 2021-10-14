@@ -1,5 +1,7 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
+import AddDeleteBox from "../AddDeleteBox";
+import EmployeeTable from "../EmployeeTable";
 
 function Landing() {
   return (
@@ -30,6 +32,8 @@ function Landing() {
         sapien. Morbi lobortis posuere turpis, at dignissim ipsum. Aliquam eu
         mattis ex.
       </Text>
+      <AddDeleteBox />
+      <EmployeeTable />
     </>
   );
 }
