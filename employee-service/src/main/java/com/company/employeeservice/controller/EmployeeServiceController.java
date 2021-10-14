@@ -2,9 +2,12 @@ package com.company.employeeservice.controller;
 
 import com.company.employeeservice.dao.EmployeeRepository;
 import com.company.employeeservice.dto.Employee;
+import com.company.employeeservice.service.ServiceLayer;
+import com.company.employeeservice.viewmodel.EmployeeViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,6 +20,9 @@ public class EmployeeServiceController {
 
     @Autowired
     private EmployeeRepository employeeRepo;
+
+    @Autowired
+    private ServiceLayer serviceLayer;
 
     @GetMapping("/employee")
     @ResponseStatus(value = HttpStatus.OK)
@@ -45,9 +51,10 @@ public class EmployeeServiceController {
 
     @PostMapping("/employee")
     @ResponseStatus(value=HttpStatus.CREATED)
-    public Employee addEmployee(@RequestBody Employee employee) {
-        employeeRepo.save(employee);
-        return employee;
+    public EmployeeViewModel addEmployee(@RequestBody EmployeeViewModel viewModel) {
+//        employeeRepo.save(employee);
+        serviceLayer.saveEmployee(viewModel);
+        return viewModel;
     }
 
     @DeleteMapping(value = "/employee/{id}")
