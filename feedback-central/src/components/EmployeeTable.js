@@ -46,15 +46,15 @@ function EmployeeTable() {
           </Thead>
           <Tbody>
             <Tr>
-              <Td>Austin{data[0].firstName}</Td>
-              <Td>Woo</Td>
-              <Td>Back-End</Td>
+              <Td>{data[0].firstName}</Td>
+              <Td>{data[0].lastName}</Td>
+              <Td>{data[0].department}</Td>
               <Td>
                 <Button colorScheme="teal">
                   <Link
                     to="/view"
                     className="nav-link active"
-                    href="./pages/View"
+                    href="./pages/View.js"
                   >
                     View
                   </Link>

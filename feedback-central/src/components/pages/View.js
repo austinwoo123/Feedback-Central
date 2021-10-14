@@ -1,7 +1,6 @@
 import React from "react";
-import Card from "../Card.js"
-
-
+import { DarkModeSwitch } from "../../components/DarkModeSwitch";
+import Profile from "../Card";
 
 
 
@@ -9,7 +8,8 @@ function View() {
 
     return (
         <>
-            <Card />
+            <DarkModeSwitch />
+            <Profile />
         </>
     );
 }
