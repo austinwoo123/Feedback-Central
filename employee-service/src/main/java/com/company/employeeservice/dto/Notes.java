@@ -18,7 +18,8 @@ public class Notes {
     private String needImprovement;
     private String note;
 
-
+    public Notes() {
+    }
 
     public Integer getId() {
         return id;
