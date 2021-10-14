@@ -11,6 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.Assert.*;
@@ -29,8 +30,8 @@ public class EmployeeRepositoryTest {
     private Employee employee1;
     private Notes notes1;
 
-    Set noteSet= new HashSet<>();
-//    private Employee employee2;
+    Set<Notes> noteSet= new HashSet<>();
+    private Employee employee2;
 
 
     @Before
@@ -52,10 +53,10 @@ public class EmployeeRepositoryTest {
         noteSet.add(notes1);
 
 
-//        employee2= new Employee();
-//        employee2.setFirstName("Alex");
-//        employee2.setLastName("Ford");
-//        employee2.setDepartment("Engineer");
+        employee2= new Employee();
+        employee2.setFirstName("Alex");
+        employee2.setLastName("Ford");
+        employee2.setDepartment("Engineer");
 
     }
 
@@ -77,26 +78,50 @@ public class EmployeeRepositoryTest {
     @Test
     public void shouldUpdateEmployeeFromDatabase(){
 
+        // Save employee1 to employee table
         employeeRepo.save(employee1);
+
         employee1.setFirstName("Kevin");
-        employee1.setNotes(noteSet);
+        employee1.setLastName("Smith");
+        employee1.setDepartment("Sales");
+        employee1.setNotes(null);
+//        employee1.setId(2);
+
         employee1 = employeeRepo.save(employee1);
 
+//        Integer id = employee1.getId();
+//        for (Notes n : noteSet) {
+//            n.setEmployeeId(id);
+//            notesRepo.save(n);
+//        }
+//        List<Notes> fromNoteTable = notesRepo.findAll();
+//        employee1.setNotes(noteSet);
 
         Employee fromRepo = employeeRepo.findById(employee1.getId()).get();
         assertEquals(employee1, fromRepo);
-
     }
 
     @Test
-    public void shouldUpdateNotesFromDatabase(){
+    public void shouldDeleteNoteAndEmployeeFromDatabase(){
+        employee1 = employeeRepo.save(employee1);
 
+        employeeRepo.deleteById(employee1.getId());
+
+        Optional<Employee> fromRepo = employeeRepo.findById(employee1.getId());
+
+        assertFalse(fromRepo.isPresent());
     }
 
-//    @Test
-//    public void shouldDeleteNoteAndEmployeeFromDatabase(){
-//
-//    }
+    @Test
+    public void shouldGetAllEmployeesFromDatabase(){
+        employeeRepo.save(employee1);
+        employeeRepo.save(employee2);
+
+
+        List<Employee> employeeList = employeeRepo.findAll();
+
+        assertEquals(2, employeeList.size());
+    }
 
 
 

@@ -21,6 +21,18 @@ public class Employee {
     @OneToMany(mappedBy = "employeeId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Notes> notes;
 
+    public Employee(Integer id, String firstName, String lastName, String department, Set<Notes> notes) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.department = department;
+        this.notes = notes;
+    }
+
+    public Employee(){
+
+    }
+
     public Integer getId() {
         return id;
     }
@@ -66,12 +78,12 @@ public class Employee {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return Objects.equals(id, employee.id) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(department, employee.department) && Objects.equals(notes, employee.notes);
+        return Objects.equals(id, employee.id) && Objects.equals(firstName, employee.firstName) && Objects.equals(lastName, employee.lastName) && Objects.equals(department, employee.department);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, department, notes);
+        return Objects.hash(id, firstName, lastName, department);
     }
 
     @Override
