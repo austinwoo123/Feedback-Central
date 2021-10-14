@@ -3,11 +3,10 @@ import { DarkModeSwitch } from "../../components/DarkModeSwitch";
 import Email from "../../components/Email";
 
 function Contact() {
-    return (
-        <>
-            <DarkModeSwitch />
-            <Email />
-        </>
-    );
+  return (
+    <>
+      <Email />
+    </>
+  );
 }
 export default Contact;
