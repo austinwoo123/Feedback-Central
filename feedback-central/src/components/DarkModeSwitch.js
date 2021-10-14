@@ -27,7 +27,7 @@ export const DarkModeSwitch = () => {
         <Flex>
           <Button as="a" variant="ghost" my={5} w="100%">
             <Link to="/home" className="nav-link active" href="./pages/Home.js">
-              Home
+              Fcentral
             </Link>
           </Button>
 
@@ -55,7 +55,7 @@ export const DarkModeSwitch = () => {
             <Link
               to="/contact"
               className="nav-link active"
-              href="./pages/Contact.js"
+              href="./pages/LoginPage.js"
             >
               Login
             </Link>

@@ -14,8 +14,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Switch>
-          <Route path="/" exact component={LoginPage} />
-          <Route path="/Home" component={Home} />
+          <Route path="/" exact component={About} />
+          <Route path="/Login" component={LoginPage} />
           <Route path="/About" component={About} />
           <Route path="/Contact" component={Contact} />
         </Switch>
