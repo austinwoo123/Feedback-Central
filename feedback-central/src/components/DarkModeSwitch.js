@@ -33,16 +33,6 @@ export const DarkModeSwitch = () => {
 
           <Button as="a" variant="ghost" my={5} w="100%">
             <Link
-              to="/about"
-              className="nav-link active"
-              href="./pages/About.js"
-            >
-              About
-            </Link>
-          </Button>
-
-          <Button as="a" variant="ghost" my={5} w="100%">
-            <Link
               to="/contact"
               className="nav-link active"
               href="./pages/Contact.js"
@@ -53,9 +43,9 @@ export const DarkModeSwitch = () => {
 
           <Button as="a" variant="ghost" my={5} w="100%">
             <Link
-              to="/contact"
+              to="/login"
               className="nav-link active"
-              href="./pages/LoginPage.js"
+              href="./pages/Login.js"
             >
               Login
             </Link>
