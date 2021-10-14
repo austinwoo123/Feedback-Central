@@ -36,7 +36,7 @@ function AddDeleteBox() {
       p={4}
       color="white"
     >
-      <FormLabel fontSize="40px">Hello User!</FormLabel>
+      <FormLabel fontSize="40px">Feedback Central</FormLabel>
       <FormControl marginTop="80px" marginLeft="40px" id="firstName">
         {/* <FormLabel marginLeft="65px">First Name</FormLabel> */}
         <Input

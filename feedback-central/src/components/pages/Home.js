@@ -3,7 +3,6 @@ import { Grid } from "@chakra-ui/react";
 import { DarkModeSwitch } from "../../components/DarkModeSwitch";
 import AddDeleteBox from "../AddDeleteBox";
 import EmployeeTable from "../EmployeeTable";
-import UserComponent from "../UserComponent";
 
 function Home() {
   return (
@@ -18,7 +17,6 @@ function Home() {
       >
         <AddDeleteBox />
         <EmployeeTable />
-        <UserComponent />
       </Grid>
     </>
   );

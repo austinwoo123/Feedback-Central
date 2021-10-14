@@ -1,5 +1,5 @@
 // import { useMediaQuery } from "@chakra-ui/media-query";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import {
   useColorMode,
   Switch,
@@ -25,17 +25,40 @@ export const DarkModeSwitch = () => {
         align="center"
       >
         <Flex>
-
           <Button as="a" variant="ghost" my={5} w="100%">
-            <Link to="/home" className="nav-link active" href="./pages/Home.js">Home</Link>
+            <Link to="/home" className="nav-link active" href="./pages/Home.js">
+              Home
+            </Link>
           </Button>
 
           <Button as="a" variant="ghost" my={5} w="100%">
-            <Link to="/about" className="nav-link active" href="./pages/About.js">About</Link>
+            <Link
+              to="/about"
+              className="nav-link active"
+              href="./pages/About.js"
+            >
+              About
+            </Link>
           </Button>
 
           <Button as="a" variant="ghost" my={5} w="100%">
-            <Link to="/contact" className="nav-link active" href="./pages/Contact.js">Contact</Link>
+            <Link
+              to="/contact"
+              className="nav-link active"
+              href="./pages/Contact.js"
+            >
+              Contact
+            </Link>
+          </Button>
+
+          <Button as="a" variant="ghost" my={5} w="100%">
+            <Link
+              to="/contact"
+              className="nav-link active"
+              href="./pages/Contact.js"
+            >
+              Login
+            </Link>
           </Button>
         </Flex>
         <Switch
