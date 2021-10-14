@@ -6,7 +6,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import View from "./components/pages/View";
 import Contact from "./components/pages/Contact";
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const queryClient = new QueryClient();
 
@@ -15,8 +15,8 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Switch>
-          <Route path="/" exact component={LoginPage} />
-          <Route path="/Home" component={Home} />
+          <Route path="/" exact component={About} />
+          <Route path="/Login" component={LoginPage} />
           <Route path="/About" component={About} />
           <Route path="/Contact" component={Contact} />
           <Route path="/View" component={View} />
