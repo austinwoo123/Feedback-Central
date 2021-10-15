@@ -3,14 +3,19 @@ import { Text } from "@chakra-ui/react";
 import AddDeleteBox from "../AddDeleteBox";
 import EmployeeTable from "../EmployeeTable";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import EmployeeInput from "../EmployeeInput";
+=======
+import NewEmployeeForm from "../EmployeeInput";
+>>>>>>> d4027eedd8d21bdf6465d56ff5b9a566c5849b4b
 import NewEmployeePage from "./NewEmployeeAdd";
 >>>>>>> f38ab99963871bf68b7d1a9a7acd1b732b0a5b29
 
 function Landing() {
   return (
     <>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <Text fontSize="lg" width="70%" marginTop="150px" marginLeft="40">
 =======
@@ -50,6 +55,17 @@ function Landing() {
       <EmployeeTable />
       <NewEmployeePage />
 >>>>>>> f38ab99963871bf68b7d1a9a7acd1b732b0a5b29
+=======
+      <h1 className="mainHeader">WELCOME, ARE YOu READY FOR ENGAGEMENT?</h1>
+      <Text fontSize="lg" width="70%" marginTop="150px" marginLeft="40">
+        Here at Feedback Central we yadayada yada Here at Feedback Central we
+        yadayada yada Here at Feedback Central we yadayada yada Here at Feedback
+        Central we yadayada yada Here at Feedback Central we yadayada yada
+      </Text>
+
+      <NewEmployeePage />
+      <EmployeeTable />
+>>>>>>> d4027eedd8d21bdf6465d56ff5b9a566c5849b4b
     </>
   );
 }
