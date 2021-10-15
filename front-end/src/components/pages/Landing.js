@@ -3,11 +3,12 @@ import { Text } from "@chakra-ui/react";
 import AddDeleteBox from "../AddDeleteBox";
 import EmployeeTable from "../EmployeeTable";
 import EmployeeInput from "../EmployeeInput";
+import NewEmployeePage from "./NewEmployeeAdd";
 
 function Landing() {
   return (
     <>
-      <Text fontSize="lg" width="70%" marginTop="150px" marginLeft="40">
+      {/* <Text fontSize="lg" width="70%" marginTop="150px" marginLeft="40">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales
         dolor arcu, et placerat urna sodales vitae. Vestibulum ante ipsum primis
         in faucibus orci luctus et ultrices posuere cubilia curae; Aenean dictum
@@ -32,9 +33,10 @@ function Landing() {
         Duis libero ligula, rhoncus mollis nisi tempus, vulputate imperdiet
         sapien. Morbi lobortis posuere turpis, at dignissim ipsum. Aliquam eu
         mattis ex.
-      </Text>
+      </Text> */}
       <EmployeeInput />
       <EmployeeTable />
+      <NewEmployeePage />
     </>
   );
 }
