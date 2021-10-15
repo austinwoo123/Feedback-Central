@@ -1,4 +1,5 @@
 import React from "react";
+import { DeleteIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import {
   Table,
@@ -63,6 +64,9 @@ class EmployeeTable extends React.Component {
             <Th>First Name</Th>
             <Th>Last Name</Th>
             <Th>Department</Th>
+            <Th>Postive Notes</Th>
+            <Th>Needs Improvement</Th>
+            <Th>Other Notes</Th>
           </Tr>
         </Thead>
         <Tbody>
@@ -72,6 +76,10 @@ class EmployeeTable extends React.Component {
               <Td>{Employee.firstName}</Td>
               <Td>{Employee.lastName}</Td>
               <Td>{Employee.department}</Td>
+              <Td>{Employee.positives}</Td>
+              <Td>{Employee.needImprovement}</Td>
+              <Td>{Employee.note}</Td>
+
               <Td>
                 <Button colorScheme="teal">
                   <Link
@@ -81,6 +89,19 @@ class EmployeeTable extends React.Component {
                   >
                     View
                   </Link>
+                </Button>
+              </Td>
+              <Td>
+                <Button
+                  leftIcon={<DeleteIcon />}
+                  colorScheme="teal"
+                  variant="solid"
+                  size="md"
+                  // padding="20px"
+                  // onClick={handleDelete}
+                  // data-id={id}
+                >
+                  Delete 🔥
                 </Button>
               </Td>
             </Tr>
