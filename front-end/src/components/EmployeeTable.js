@@ -70,52 +70,52 @@ class EmployeeTable extends React.Component {
             <Th>Other Notes</Th>
           </Tr >
         </Thead >
-      <Tbody>
-        {this.state.employees.map((Employee) => (
-          <Tr key={Employee.id}>
-            <Td>{Employee.id}</Td>
-            <Td>{Employee.firstName}</Td>
-            <Td>{Employee.lastName}</Td>
-            <Td>{Employee.department}</Td>
-              <Td>{Employee.positives}</Td>
-              <Td>{Employee.needImprovement}</Td>
-              <Td>{Employee.note}</Td>
+        <Tbody>
+          {this.state.employees.map((Employee) => (
+            <Tr key={Employee.id}>
+              <Td>{Employee.id}</Td>
+              <Td>{Employee.firstName}</Td>
+              <Td>{Employee.lastName}</Td>
+              <Td>{Employee.department}</Td>
+              <Td>{Employee.response.positives}</Td>
+              <Td>{Employee.notes.needImprovement}</Td>
+              <Td>{Employee.notes.note}</Td>
 
-    <Td>
-      <Button colorScheme="teal">
-        <Link
-          to="/view"
-          className="nav-link active"
-          href="./pages/View"
-        >
-          View
-        </Link>
-      </Button>
-    </Td>
+              <Td>
+                <Button colorScheme="teal">
+                  <Link
+                    to="/view"
+                    className="nav-link active"
+                    href="./pages/View"
+                  >
+                    View
+                  </Link>
+                </Button>
+              </Td>
               <Td>
                 <Button
                   leftIcon={<DeleteIcon />}
                   colorScheme="teal"
                   variant="solid"
                   size="md"
-                  // padding="20px"
-                  // onClick={handleDelete}
-                  // data-id={id}
+                // padding="20px"
+                // onClick={handleDelete}
+                // data-id={id}
                 >
                   Delete 🔥
                 </Button>
               </Td>
             </Tr >
           ))
-  }
+          }
         </Tbody>
-  <Tfoot>
-    <Tr>
-      <Th></Th>
-      <Th></Th>
-      <Th></Th>
-    </Tr>
-  </Tfoot>
+        <Tfoot>
+          <Tr>
+            <Th></Th>
+            <Th></Th>
+            <Th></Th>
+          </Tr>
+        </Tfoot>
       </Table >
     );
   }

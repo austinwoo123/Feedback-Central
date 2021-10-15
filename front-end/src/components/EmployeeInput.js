@@ -34,7 +34,7 @@ function NewEmployeeForm(props) {
       department: enteredDepartment,
       notes: [
         {
-          postives: enteredPositive,
+          positives: enteredPositive,
           needImprovement: enteredNeedImprovement,
           note: enteredNote,
         },
