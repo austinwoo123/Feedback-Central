@@ -1,5 +1,14 @@
 import React from "react";
 import { useRef } from "react";
+import "./EmployeeInput.css";
+import {
+  Box,
+  Button,
+  FormControl,
+  FormLabel,
+  Input,
+  Textarea,
+} from "@chakra-ui/react";
 
 function NewEmployeeForm(props) {
   const firstNameInputRef = useRef();
@@ -23,9 +32,16 @@ function NewEmployeeForm(props) {
       firstName: enteredFirstName,
       lastName: enteredLastName,
       department: enteredDepartment,
-      postives: enteredPositive,
-      needImprovement: enteredNeedImprovement,
-      note: enteredNote,
+      notes: [
+        {
+          postives: enteredPositive,
+          needImprovement: enteredNeedImprovement,
+          note: enteredNote,
+        },
+      ],
+      // postives: enteredPositive,
+      // needImprovement: enteredNeedImprovement,
+      // note: enteredNote,
       // description: enteredDescription
     };
     console.log(employeeData);
@@ -33,7 +49,18 @@ function NewEmployeeForm(props) {
   }
 
   return (
-    <>
+    <Box
+      borderRadius="25px"
+      // padding="3rem"
+      marginLeft="8rem"
+      marginTop="25rem"
+      // marginBottom="10rem"
+      bg="teal"
+      // w="1000px"
+      // h="500px"
+      p={4}
+      color="white"
+    >
       <form onSubmit={submitHandler}>
         <div>
           <label htmlFor="title">First Name</label>
@@ -78,7 +105,7 @@ function NewEmployeeForm(props) {
           <button>Add Employee</button>
         </div>
       </form>
-    </>
+    </Box>
   );
 }
 

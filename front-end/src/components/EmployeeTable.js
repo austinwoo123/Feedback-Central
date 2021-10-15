@@ -56,6 +56,7 @@ class EmployeeTable extends React.Component {
         padding="10px"
         borderRadius="25px"
         border="groove"
+        marginTop="10px"
       >
         <TableCaption>Employee List</TableCaption>
         <Thead>
