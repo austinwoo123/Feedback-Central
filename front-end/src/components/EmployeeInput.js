@@ -15,11 +15,17 @@ function NewEmployeeForm(props) {
     const enteredFirstName = firstNameInputRef.current.value;
     const enteredLastName = lastNameInputRef.current.value;
     const enteredDepartment = departmentInputRef.current.value;
+    const enteredPositive = positiveNoteInputRef.current.value;
+    const enteredNeedImprovement = needsImprovementNoteInputRef.current.value;
+    const enteredNote = noteInputRef.current.value;
 
     const employeeData = {
       firstName: enteredFirstName,
       lastName: enteredLastName,
       department: enteredDepartment,
+      postives: enteredPositive,
+      needImprovement: enteredNeedImprovement,
+      note: enteredNote,
       // description: enteredDescription
     };
     console.log(employeeData);
