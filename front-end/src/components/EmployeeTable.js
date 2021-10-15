@@ -77,10 +77,13 @@ class EmployeeTable extends React.Component {
               <Td>{Employee.firstName}</Td>
               <Td>{Employee.lastName}</Td>
               <Td>{Employee.department}</Td>
-              <Td>{Employee.positives}</Td>
-              <Td>{Employee.needImprovement}</Td>
-              <Td>{Employee.note}</Td>
-
+              {Employee.notes.map((note) => (
+                <>
+                <Td>{note.positives}</Td>
+                <Td>{note.needImprovement}</Td>
+                <Td>{note.note}</Td>
+                </>
+              ))}
               <Td>
                 <Button colorScheme="teal">
                   <Link
