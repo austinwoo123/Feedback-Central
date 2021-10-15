@@ -1,4 +1,5 @@
 import React from "react";
+import { DeleteIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import {
   Table,
@@ -81,6 +82,19 @@ class EmployeeTable extends React.Component {
                   >
                     View
                   </Link>
+                </Button>
+              </Td>
+              <Td>
+                <Button
+                  leftIcon={<DeleteIcon />}
+                  colorScheme="teal"
+                  variant="solid"
+                  size="md"
+                  // padding="20px"
+                  // onClick={handleDelete}
+                  // data-id={id}
+                >
+                  Delete 🔥
                 </Button>
               </Td>
             </Tr>
