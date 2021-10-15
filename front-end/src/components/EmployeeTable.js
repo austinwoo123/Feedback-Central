@@ -68,8 +68,8 @@ class EmployeeTable extends React.Component {
             <Th>Postive Notes</Th>
             <Th>Needs Improvement</Th>
             <Th>Other Notes</Th>
-          </Tr >
-        </Thead >
+          </Tr>
+        </Thead>
         <Tbody>
           {this.state.employees.map((Employee) => (
             <Tr key={Employee.id}>
@@ -77,10 +77,13 @@ class EmployeeTable extends React.Component {
               <Td>{Employee.firstName}</Td>
               <Td>{Employee.lastName}</Td>
               <Td>{Employee.department}</Td>
-              <Td>{Employee.response.positives}</Td>
-              <Td>{Employee.notes.needImprovement}</Td>
-              <Td>{Employee.notes.note}</Td>
-
+              {Employee.notes.map((note) => (
+                <>
+                  <Td>{note.positives}</Td>
+                  <Td>{note.needImprovement}</Td>
+                  <Td>{note.note}</Td>
+                </>
+              ))}
               <Td>
                 <Button colorScheme="teal">
                   <Link
@@ -105,9 +108,8 @@ class EmployeeTable extends React.Component {
                   Delete 🔥
                 </Button>
               </Td>
-            </Tr >
-          ))
-          }
+            </Tr>
+          ))}
         </Tbody>
         <Tfoot>
           <Tr>
@@ -116,7 +118,7 @@ class EmployeeTable extends React.Component {
             <Th></Th>
           </Tr>
         </Tfoot>
-      </Table >
+      </Table>
     );
   }
 }
