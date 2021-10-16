@@ -9,8 +9,8 @@ import NewEmployeeForm from "../../components/newEmployeeForm";
 import EmployeeTable from "../../components/newEmployeeTable";
 
 import Service1Img from "../../assets/illustrations/welcomeEmployee.jpg";
-import Service2Img from "../../assets/illustrations/fancy-input.png";
-// import Service3Img from "../../assets/illustrations/bug_fixed.png";
+import Service2Img from "../../assets/illustrations/our-mission.jpg";
+import Service3Img from "../../assets/illustrations/free.png";
 
 const ServicesContainer = styled(Element)`
   width: 100%;
@@ -25,25 +25,23 @@ const ServicesContainer = styled(Element)`
 export function ServicesSection(props) {
   return (
     <ServicesContainer name="servicesSection">
-      <SectionTitle>Add Your Employees</SectionTitle>
+      <SectionTitle>Welcome to Feedback Central</SectionTitle>
       <Marginer direction="vertical" margin="3em" />
       <OurSerivce
-        title="Have a new employee?"
+        title="Engagement Made Easy"
         description="Add your new associate to the form below.  Start keeping
         track from day one to help improve your engagement and onboarding!"
         imgUrl={Service1Img}
       />
       <OurSerivce
-        title="Mission Statement?"
-        description="Add your new associate to the form below.  Start keeping
-        track from day one to help improve your engagement and onboarding!"
+        title="Mission Statement"
+        description="Our mission is to provide an easy-to-use platform for managers/supervisors to write personalized reviews for their employees."
         imgUrl={Service2Img}
       />
       <OurSerivce
-        title="Have a new employee?"
-        description="Add your new associate to the form below.  Start keeping
-        track from day one to help improve your engagement and onboarding!"
-        imgUrl={Service1Img}
+        title="Try Feedback Central for Free"
+        description="No credit card required, no software to install. Try Feedback Central today.  Let us know what you think.  We are open to FEEDBACK."
+        imgUrl={Service3Img}
       />
       {/* <NewEmployeeForm />
       <EmployeeTable /> */}

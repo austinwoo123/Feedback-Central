@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import { Footer } from "../../components/footer";
+// import Footer from "../../components/footer";
 // import { Marginer } from "../../components/marginer";
 // import { MoreAboutSection } from "./moreAboutSection";
 // import { ReviewsSection } from "./reviewsSection";
@@ -19,12 +19,8 @@ export function Homepage(props) {
     <PageContainer>
       <TopSection />
       <ServicesSection />
-      {/* <ServicesSection />
-      <Marginer direction="vertical" margin="2em" />
-      <ReviewsSection />
-      <MoreAboutSection />
-      <Marginer direction="vertical" margin="8em" />
-      <Footer /> */}
+
+      {/* <Footer /> */}
     </PageContainer>
   );
 }
