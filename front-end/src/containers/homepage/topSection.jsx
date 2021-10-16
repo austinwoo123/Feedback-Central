@@ -7,7 +7,7 @@ import { Button } from "../../components/button";
 import { DownArrow } from "../../components/downArrow";
 import { Logo } from "../../components/logo";
 import { Marginer } from "../../components/marginer";
-// import { Navbar } from "../../components/navbar";
+import { Navbar } from "../../components/navbar";
 
 const TopContainer = styled.div`
   width: 100%;
