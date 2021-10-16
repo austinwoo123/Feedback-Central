@@ -7,7 +7,7 @@ import { Button } from "../../components/button";
 import { DownArrow } from "../../components/downArrow";
 import { Logo } from "../../components/logo";
 import { Marginer } from "../../components/marginer";
-// import { Navbar } from "../../components/navbar";
+import { Navbar } from "../../components/navbar";
 
 const TopContainer = styled.div`
   width: 100%;
@@ -15,6 +15,8 @@ const TopContainer = styled.div`
   padding: 0;
   background-image: url(${BackgroundImg});
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
 `;
 
 const BackgroundFilter = styled.div`
@@ -51,7 +53,7 @@ export function TopSection(props) {
     <Element name="topSection">
       <TopContainer>
         <BackgroundFilter>
-          {/* <Navbar /> */}
+          <Navbar />
           <Marginer direction="vertical" margin="8em" />
           <Logo />
           <Marginer direction="vertical" margin="2em" />
