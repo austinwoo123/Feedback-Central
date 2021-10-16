@@ -1,6 +1,6 @@
 import React from "react";
 import { DeleteIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 import {
   Table,
   Thead,
@@ -14,8 +14,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { useQuery, useQueryClient, useMutation } from "react-query";
-import api from "../api";
-import UserService from "../services/UserService";
+
+import UserService from "../../services/UserService";
 
 class EmployeeTable extends React.Component {
   constructor(props) {
@@ -34,14 +34,22 @@ class EmployeeTable extends React.Component {
   render() {
     return (
       <Table
-        variant="striped"
-        margin="auto"
-        marginRight="400px"
-        width="65%"
-        padding="10px"
-        borderRadius="25px"
-        border="groove"
-        marginTop="10px"
+        width="100%"
+        min-height="1100px"
+        display="flex"
+        flex-direction="column"
+        align-items="center"
+        padding="10px 0"
+        color="black"
+
+        // variant="striped"
+        // margin="auto"
+        // marginRight="400px"
+        // width="65%"
+        // padding="10px"
+        // borderRadius="25px"
+        // border="groove"
+        // marginTop="10px"
       >
         <TableCaption>Employee List</TableCaption>
         <Thead>
@@ -71,13 +79,15 @@ class EmployeeTable extends React.Component {
               ))}
               <Td>
                 {/* <Button colorScheme="teal">
-                  <Link
-                    to="/view"
-                    className="nav-link active"
-                    href="./pages/View"
-                  >
-                    View
-                  </Link>
+                  <Router>
+                    <Link
+                      to="/view"
+                      className="nav-link active"
+                      href="./pages/View"
+                    >
+                      View
+                    </Link>
+                  </Router>
                 </Button> */}
               </Td>
               <Td>

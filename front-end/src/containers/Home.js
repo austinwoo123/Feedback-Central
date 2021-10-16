@@ -1,8 +1,8 @@
 import React from "react";
 import { Grid } from "@chakra-ui/react";
-import { DarkModeSwitch } from "../../components/DarkModeSwitch";
-import AddDeleteBox from "../AddDeleteBox";
-import EmployeeTable from "../EmployeeTable";
+import { DarkModeSwitch } from "../components/DarkModeSwitch";
+import AddDeleteBox from "../components/AddDeleteBox";
+import EmployeeTable from "../components/EmployeeTable";
 
 function Home() {
   return (
