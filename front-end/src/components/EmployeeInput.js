@@ -55,11 +55,11 @@ function NewEmployeeForm(props) {
       marginLeft="8rem"
       marginTop="25rem"
       // marginBottom="10rem"
-      bg="teal"
+      bg="blue"
       // w="1000px"
       // h="500px"
       p={4}
-      color="white"
+      color="black"
     >
       <form onSubmit={submitHandler}>
         <div>
