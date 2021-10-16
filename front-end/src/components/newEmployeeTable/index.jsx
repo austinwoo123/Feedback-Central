@@ -33,24 +33,7 @@ class EmployeeTable extends React.Component {
 
   render() {
     return (
-      <Table
-        width="100%"
-        min-height="1100px"
-        display="flex"
-        flex-direction="column"
-        align-items="center"
-        padding="10px 0"
-        color="black"
-
-        // variant="striped"
-        // margin="auto"
-        // marginRight="400px"
-        // width="65%"
-        // padding="10px"
-        // borderRadius="25px"
-        // border="groove"
-        // marginTop="10px"
-      >
+      <Table>
         <TableCaption>Employee List</TableCaption>
         <Thead>
           <Tr>
@@ -78,8 +61,9 @@ class EmployeeTable extends React.Component {
                 </>
               ))}
               <Td>
-                {/* <Button colorScheme="teal">
-                  <Router>
+                <Button colorScheme="teal">
+                  View
+                  {/* <Router>
                     <Link
                       to="/view"
                       className="nav-link active"
@@ -87,8 +71,8 @@ class EmployeeTable extends React.Component {
                     >
                       View
                     </Link>
-                  </Router>
-                </Button> */}
+                  </Router> */}
+                </Button>
               </Td>
               <Td>
                 <Button

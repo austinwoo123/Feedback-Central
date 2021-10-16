@@ -1,9 +1,20 @@
 import React from "react";
 import "./App.css";
 import { Homepage } from "./containers/homepage";
+import { EmployeePage } from "./containers/employeePage";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App(props) {
-  return <Homepage />;
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route exact path="/employees" component={EmployeePage} />
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;
