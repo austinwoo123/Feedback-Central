@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-// import "./EmployeeInput.css";
+import "./index.css";
 import {
   Box,
   Button,
@@ -55,9 +55,12 @@ function NewEmployeeForm(props) {
       flex-direction="column"
       align-items="center"
       max-width="60%"
+      width="1000px"
+      height="300px"
       bg="#F5F5DC"
-      p={4}
+      // p={4}
       color="black"
+      margin="50px"
     >
       <form onSubmit={submitHandler}>
         <div>

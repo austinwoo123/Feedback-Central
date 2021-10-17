@@ -36,9 +36,8 @@ export function EmployeePage(props) {
   return (
     <PageContainer>
       <BackgroundFilter2>
-        {/* <NewEmployeeForm /> */}
-        <EmployeeTable />
         <NewEmployeePage />
+        <EmployeeTable />
 
         {/* <Footer /> */}
       </BackgroundFilter2>

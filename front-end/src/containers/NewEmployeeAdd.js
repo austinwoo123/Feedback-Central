@@ -18,7 +18,6 @@ function NewEmployeePage() {
 
   return (
     <section>
-      <h1>Add New Employee</h1>
       <NewEmployeeForm onEmployeeAdd={addEmployeeHandler} />
     </section>
   );
