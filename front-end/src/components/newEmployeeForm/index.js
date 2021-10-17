@@ -10,7 +10,6 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import { TextArea } from "semantic-ui-react";
-
 function NewEmployeeForm(props) {
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();
@@ -18,7 +17,6 @@ function NewEmployeeForm(props) {
   const positiveNoteInputRef = useRef();
   const needsImprovementNoteInputRef = useRef();
   const noteInputRef = useRef();
-
   // const descriptionInputRef = useRef();
   function submitHandler(event) {
     event.preventDefault();
@@ -28,7 +26,6 @@ function NewEmployeeForm(props) {
     const enteredPositive = positiveNoteInputRef.current.value;
     const enteredNeedImprovement = needsImprovementNoteInputRef.current.value;
     const enteredNote = noteInputRef.current.value;
-
     const employeeData = {
       firstName: enteredFirstName,
       lastName: enteredLastName,
@@ -48,7 +45,6 @@ function NewEmployeeForm(props) {
     console.log(employeeData);
     props.onEmployeeAdd(employeeData);
   }
-
   return (
     <Box
       borderRadius="25px"
@@ -57,9 +53,9 @@ function NewEmployeeForm(props) {
       align-items="center"
       max-width="60%"
       width="1000px"
-      height="300px"
-      bg="#F5F5DC"
-      p={4}
+      height="450px"
+      bg="lightblue"
+      // p={4}
       color="black"
       margin="100px"
       padding="20px"
@@ -124,5 +120,4 @@ function NewEmployeeForm(props) {
     </Box>
   );
 }
-
 export default NewEmployeeForm;

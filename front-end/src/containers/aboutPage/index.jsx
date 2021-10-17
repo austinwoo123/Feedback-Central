@@ -3,13 +3,27 @@ import { Form, Input, TextArea, Button } from "semantic-ui-react";
 import "./index.css";
 import { Container, Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
+import styled from "styled-components";
+import BackgroundImg from "../../assets/pictures/contact-us-background.jpg";
 
 const About = () => {
   {
     /* --- handleOnSubmit method --- */
   }
+
+  const AboutContainer = styled.div`
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background-image: url(${BackgroundImg});
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attatchment: fixed;
+  `;
+
   return (
-    <>
+    <AboutContainer>
       <Box className="Dev1" boxSize="200px">
         <Image
           src="https://avatars.githubusercontent.com/u/61285870?v=4"
@@ -93,7 +107,7 @@ const About = () => {
           </Box>
         </Container>
       </div>
-    </>
+    </AboutContainer>
   );
 };
 export default About;
