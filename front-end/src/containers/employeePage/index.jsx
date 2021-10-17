@@ -6,13 +6,6 @@ import BackgroundImg from "../../assets/pictures/Fist-Bumps.jpg";
 import NewEmployeePage from "../NewEmployeeAdd";
 import { Navbar } from "../../components/navbar";
 
-// import Footer from "../../components/footer";
-// import { Marginer } from "../../components/marginer";
-// import { MoreAboutSection } from "./moreAboutSection";
-// import { ReviewsSection } from "./reviewsSection";
-// import { ServicesSection } from "./servicesSection";
-// import { TopSection } from "./topSection";
-
 const PageContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -40,8 +33,6 @@ export function EmployeePage(props) {
         <Navbar />
         <NewEmployeePage />
         <EmployeeTable />
-
-        {/* <Footer /> */}
       </BackgroundFilter2>
     </PageContainer>
   );
