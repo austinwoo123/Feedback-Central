@@ -29,15 +29,15 @@ const About = () => {
     grid-column-gap: 75px;
   `;
 
-  const BackgroundFilter2 = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: lightgrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-size: cover;
-  `;
+  // const BackgroundFilter2 = styled.div`
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: lightgrey;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   background-size: cover;
+  // `;
 
   const MainContainer = styled.div`
     background-image: url(${BackgroundImg});

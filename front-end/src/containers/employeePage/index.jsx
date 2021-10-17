@@ -7,6 +7,7 @@ import NewEmployeePage from "../NewEmployeeAdd";
 import { Navbar } from "../../components/navbar";
 import Footer from "../../components/Footer";
 
+
 const PageContainer = styled.div`
   width: 100%;
   height: 100%;
@@ -32,6 +33,7 @@ export function EmployeePage(props) {
     <PageContainer>
       <BackgroundFilter2>
         <Navbar />
+
         <NewEmployeePage />
         <EmployeeTable />
       </BackgroundFilter2>
