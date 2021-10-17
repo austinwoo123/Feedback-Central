@@ -29,17 +29,10 @@ const TableContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-<<<<<<< HEAD
-  background-color: #009879;
-  color: #ffffff;
-  text-align: left;
-  padding: 12px 15px;
-=======
   background-color: white;
   color: black;
   padding: 15px 20px;
   border-bottom: 1px solid #dddddd;
->>>>>>> ac2e23d290cf980f9e74d685e1f33f32e6275131
 `;
 
 class EmployeeTable extends React.Component {
