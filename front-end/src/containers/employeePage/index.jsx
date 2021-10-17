@@ -5,6 +5,7 @@ import EmployeeTable from "../../components/newEmployeeTable";
 import BackgroundImg from "../../assets/pictures/Fist-Bumps.jpg";
 import NewEmployeePage from "../NewEmployeeAdd";
 import { Navbar } from "../../components/navbar";
+import Footer from "../../components/Footer";
 
 
 const PageContainer = styled.div`
@@ -36,6 +37,7 @@ export function EmployeePage(props) {
         <NewEmployeePage />
         <EmployeeTable />
       </BackgroundFilter2>
+      <Footer />
     </PageContainer>
   );
 }
