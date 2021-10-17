@@ -1,7 +1,53 @@
 .inputField {
-  background-color: rgb(84, 84, 102);
+  /* background-color: rgb(84, 84, 102); */
 }
 
 label {
-  padding: 100px;
+  margin:1rem;
+  font-size: large;
 }
+
+input{
+  background-color: rgba(84, 84, 102, 0.356)
+}
+
+.button{
+  font-size:large;
+  margin: 2rem;
+  background-color: rgba(209, 111, 111, 0.753);
+  margin-left: 40rem;
+  width:100px;
+  height:70px;
+}
+
+.firstName{
+  margin-top:3rem;
+  margin-bottom: 1rem;
+  margin-left:3rem;
+}
+
+.lastName{
+  margin-bottom: 1rem;
+  margin-left:3rem;
+}
+
+.department{
+  margin-bottom:1rem;
+  margin-left:3rem;
+}
+
+.positiveNote{
+  margin-bottom:1rem;
+  margin-left:3rem;
+}
+
+.needImprovement{
+  margin-bottom:1rem;
+  margin-left:3rem;
+}
+
+.notes{
+  margin-bottom:1rem;
+  margin-left:3rem;
+}
+
