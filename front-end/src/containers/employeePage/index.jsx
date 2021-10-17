@@ -18,7 +18,6 @@ const PageContainer = styled.div`
   flex-direction: column;
   padding: 0;
   position: relative;
-  background-repeat: no-repeat;
   background-size: cover;
 `;
 
@@ -29,6 +28,7 @@ const BackgroundFilter2 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
 `;
 
 export function EmployeePage(props) {
