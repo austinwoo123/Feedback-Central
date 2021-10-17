@@ -62,7 +62,9 @@ export function TopSection(props) {
             Always Remind Your Team of Their Greatness
           </MotivationalText>
           <Marginer direction="vertical" margin="2em" />
+
           <Button href="google.com">Get Started</Button>
+
           <DownArrowContainer onClick={scrollToNextSection}>
             <DownArrow />
           </DownArrowContainer>
