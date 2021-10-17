@@ -5,11 +5,7 @@ import { Container, Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import styled from "styled-components";
 import BackgroundImg from "../../assets/pictures/contact-us-background.jpg";
-<<<<<<< HEAD
-import Footer from "../../components/Footer";
-=======
 import { Navbar } from "../../components/navbar";
->>>>>>> c8419b4b2958ba6d2248fa5dd2a44aa82b88f2da
 
 const About = () => {
   {
@@ -32,15 +28,15 @@ const About = () => {
     grid-column-gap: 75px;
   `;
 
-  const BackgroundFilter2 = styled.div`
-    width: 100%;
-    height: 100%;
-    background-color: lightgrey;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-size: cover;
-  `;
+  // const BackgroundFilter2 = styled.div`
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: lightgrey;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   background-size: cover;
+  // `;
 
   const MainContainer = styled.div`
     background-image: url(${BackgroundImg});
