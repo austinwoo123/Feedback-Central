@@ -1,4 +1,4 @@
-import NewEmployeeForm from "../EmployeeInput";
+import NewEmployeeForm from "../../src/components/newEmployeeForm";
 import { useHistory } from "react-router";
 
 function NewEmployeePage() {

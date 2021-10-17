@@ -29,6 +29,7 @@
     "semantic-ui-react": "^2.0.4",
     "styled-components": "^5.3.1",
     "sweetalert2": "^11.1.7",
+    "useref": "^1.4.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
