@@ -5,11 +5,8 @@ import { Container, Image } from "@chakra-ui/react";
 import { Box } from "@chakra-ui/react";
 import styled from "styled-components";
 import BackgroundImg from "../../assets/pictures/contact-us-background.jpg";
-<<<<<<< HEAD
-import Footer from "../../components/Footer";
-=======
 import { Navbar } from "../../components/navbar";
->>>>>>> c8419b4b2958ba6d2248fa5dd2a44aa82b88f2da
+import Footer from "../../components/Footer";
 
 const About = () => {
   {
@@ -136,6 +133,7 @@ const About = () => {
             </Box>
           </Container>
         </div>
+        <Footer />
       </MainContainer>
     </>
   );
