@@ -56,6 +56,12 @@ class EmployeeTable extends React.Component {
     });
   }
 
+  handleDelete(id) {
+    UserService.deleteEmployees(id)
+      .then((data) => window.location.reload())
+      .catch((err) => console.log(err));
+  }
+
   render() {
     return (
       <TableContainer>
@@ -106,6 +112,7 @@ class EmployeeTable extends React.Component {
                     colorScheme="red"
                     variant="solid"
                     size="md"
+                    onClick={() => this.handleDelete(Employee.id)}
                   // padding="20px"
                   // onClick={handleDelete}
                   // data-id={id}
