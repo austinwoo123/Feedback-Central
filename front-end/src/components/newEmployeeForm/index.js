@@ -9,7 +9,7 @@ import {
   Input,
   Textarea,
 } from "@chakra-ui/react";
-
+import { TextArea } from "semantic-ui-react";
 function NewEmployeeForm(props) {
   const firstNameInputRef = useRef();
   const lastNameInputRef = useRef();
@@ -17,7 +17,6 @@ function NewEmployeeForm(props) {
   const positiveNoteInputRef = useRef();
   const needsImprovementNoteInputRef = useRef();
   const noteInputRef = useRef();
-
   // const descriptionInputRef = useRef();
   function submitHandler(event) {
     event.preventDefault();
@@ -27,7 +26,6 @@ function NewEmployeeForm(props) {
     const enteredPositive = positiveNoteInputRef.current.value;
     const enteredNeedImprovement = needsImprovementNoteInputRef.current.value;
     const enteredNote = noteInputRef.current.value;
-
     const employeeData = {
       firstName: enteredFirstName,
       lastName: enteredLastName,
@@ -47,7 +45,6 @@ function NewEmployeeForm(props) {
     console.log(employeeData);
     props.onEmployeeAdd(employeeData);
   }
-
   return (
     <Box
       borderRadius="25px"
@@ -56,14 +53,15 @@ function NewEmployeeForm(props) {
       align-items="center"
       max-width="60%"
       width="1000px"
-      height="300px"
-      bg="#F5F5DC"
+      height="475px"
+      bg="rgba(255,255,255, 0.7)"
       // p={4}
       color="black"
-      margin="50px"
+      margin="20px"
+      padding="20px"
     >
       <form onSubmit={submitHandler}>
-        <div>
+        <div className="firstName">
           <label htmlFor="title">First Name:</label>
           <input
             className="inputField"
@@ -73,11 +71,11 @@ function NewEmployeeForm(props) {
             ref={firstNameInputRef}
           />
         </div>
-        <div>
+        <div className="lastName">
           <label htmlFor="title">Last Name:</label>
           <input type="text" required id="lastName" ref={lastNameInputRef} />
         </div>
-        <div>
+        <div className="department">
           <label htmlFor="title">Department:</label>
           <input
             type="text"
@@ -86,16 +84,17 @@ function NewEmployeeForm(props) {
             ref={departmentInputRef}
           />
         </div>
-        <div>
+        <div className="positiveNote">
           <label htmlFor="title">Positive Notes:</label>
           <input
             type="text"
             required
             id="positiveNote"
             ref={positiveNoteInputRef}
+            size="sm"
           />
         </div>
-        <div>
+        <div className="needImprovement">
           <label htmlFor="title">Needs Improvement Notes:</label>
           <input
             type="text"
@@ -104,16 +103,21 @@ function NewEmployeeForm(props) {
             ref={needsImprovementNoteInputRef}
           />
         </div>
-        <div>
+        <div className="notes">
           <label htmlFor="title">Notes:</label>
-          <input type="text" required id="note" ref={noteInputRef} />
+          <input
+            className="noteInput"
+            type="text"
+            required
+            id="note"
+            ref={noteInputRef}
+          />
         </div>
-        <div>
+        <div className="button">
           <button>Add Employee</button>
         </div>
       </form>
     </Box>
   );
 }
-
 export default NewEmployeeForm;

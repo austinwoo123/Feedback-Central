@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
-
+import { Link } from "react-router-dom";
 import FeedbackCentralLogo from "../../assets/logo/FeedbackCentral-logos.jpeg";
 import { theme } from "../../theme";
 
@@ -42,9 +42,11 @@ export function Logo(props) {
   return (
     <LogoContainer inline={inline} small={small}>
       <LogoImg src={FeedbackCentralLogo} inline={inline} small={small} />
-      <LogoText inline={inline} small={small}>
-        Feedback Central
-      </LogoText>
+      <Link to="/">
+        <LogoText inline={inline} small={small}>
+          Feedback Central
+        </LogoText>
+      </Link>
     </LogoContainer>
   );
 }

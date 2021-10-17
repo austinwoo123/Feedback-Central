@@ -51,15 +51,17 @@ function NewEmployeeForm(props) {
   return (
     <Box
       borderRadius="25px"
-      // padding="3rem"
-      marginLeft="8rem"
-      marginTop="25rem"
-      // marginBottom="10rem"
-      bg="blue"
-      // w="1000px"
-      // h="500px"
-      p={4}
+      display="flex"
+      flex-direction="column"
+      align-items="center"
+      max-width="60%"
+      width="1000px"
+      height="475px"
+      bg="rgba(255,255,255, 0.7)"
+      // p={4}
       color="black"
+      margin="20px"
+      padding="20px"
     >
       <form onSubmit={submitHandler}>
         <div>
