@@ -5,79 +5,43 @@ label {
   margin: 1rem;
   font-size: large;
 }
-<<<<<<< HEAD
+
 input {
-  background-color: rgba(84, 84, 102, 0.356);
+  background-color: rgba(138, 138, 146, 0.11);
 }
+
 .button {
   font-size: large;
-  margin: 2rem;
-  background-color: rgba(209, 111, 111, 0.753);
-  margin-left: 40rem;
+  background-color: rgba(221, 12, 12, 0.753);
+  margin-left: 45rem;
   width: 100px;
   height: 70px;
 }
+
 .firstName {
   margin-top: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 3rem;
 }
+
 .lastName {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 3rem;
 }
+
 .department {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 3rem;
 }
+
 .positiveNote {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 3rem;
 }
+
 .needImprovement {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-left: 3rem;
-=======
-
-input{
-  background-color: rgba(138, 138, 146, 0.11);
-  
-  
-}
-
-.button{
-  font-size:large;
-  background-color: rgba(221, 12, 12, 0.753);
-  margin-left: 45rem;
-  width:100px;
-  height:70px;
-}
-
-.firstName{
-  margin-top:3rem;
-  margin-bottom: 2rem;
-  margin-left:3rem;
-}
-
-.lastName{
-  margin-bottom: 2rem;
-  margin-left:3rem;
-}
-
-.department{
-  margin-bottom:2rem;
-  margin-left:3rem;
-}
-
-.positiveNote{
-  margin-bottom:2rem;
-  margin-left:3rem;
-}
-
-.needImprovement{
-  margin-bottom:2rem;
-  margin-left:3rem;
->>>>>>> 13b8e6f2fd2d09701c5ceb404545bbb88dfa2e2f
 }
 .notes {
   margin-bottom: 1rem;
