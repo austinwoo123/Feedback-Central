@@ -9,6 +9,7 @@ import {
   Input,
   Textarea,
 } from "@chakra-ui/react";
+import { TextArea } from "semantic-ui-react";
 
 function NewEmployeeForm(props) {
   const firstNameInputRef = useRef();
@@ -60,10 +61,11 @@ function NewEmployeeForm(props) {
       bg="#F5F5DC"
       p={4}
       color="black"
-      margin="50px"
+      margin="100px"
+      padding="20px"
     >
       <form onSubmit={submitHandler}>
-        <div>
+        <div className="firstName">
           <label htmlFor="title">First Name:</label>
           <input
             className="inputField"
@@ -73,11 +75,11 @@ function NewEmployeeForm(props) {
             ref={firstNameInputRef}
           />
         </div>
-        <div>
+        <div className="lastName">
           <label htmlFor="title">Last Name:</label>
           <input type="text" required id="lastName" ref={lastNameInputRef} />
         </div>
-        <div>
+        <div className="department">
           <label htmlFor="title">Department:</label>
           <input
             type="text"
@@ -86,16 +88,17 @@ function NewEmployeeForm(props) {
             ref={departmentInputRef}
           />
         </div>
-        <div>
+        <div className="positiveNote">
           <label htmlFor="title">Positive Notes:</label>
           <input
             type="text"
             required
             id="positiveNote"
             ref={positiveNoteInputRef}
+            size="sm"
           />
         </div>
-        <div>
+        <div className="needImprovement">
           <label htmlFor="title">Needs Improvement Notes:</label>
           <input
             type="text"
@@ -104,11 +107,17 @@ function NewEmployeeForm(props) {
             ref={needsImprovementNoteInputRef}
           />
         </div>
-        <div>
+        <div className="notes">
           <label htmlFor="title">Notes:</label>
-          <input type="text" required id="note" ref={noteInputRef} />
+          <input
+            className="noteInput"
+            type="text"
+            required
+            id="note"
+            ref={noteInputRef}
+          />
         </div>
-        <div>
+        <div className="button">
           <button>Add Employee</button>
         </div>
       </form>

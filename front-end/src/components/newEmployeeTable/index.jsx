@@ -16,23 +16,30 @@ import {
 } from "@chakra-ui/react";
 import { useQuery, useQueryClient, useMutation } from "react-query";
 import UserService from "../../services/UserService";
+import { Textarea } from "@chakra-ui/react"
 
 const TableContainer = styled.div`
   width: 60%;
   border-collapse: collapse;
   margin: 225px 300px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: sans-serif;
   min-width: 1000px;
-  box-shadow: 0 0 30px blue;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   background-color: #009879;
   color: #ffffff;
   text-align: left;
   padding: 12px 15px;
+=======
+  background-color: white;
+  color: black;
+  padding: 15px 20px;
+  border-bottom: 1px solid #dddddd;
+>>>>>>> ac2e23d290cf980f9e74d685e1f33f32e6275131
 `;
 
 class EmployeeTable extends React.Component {
@@ -80,7 +87,7 @@ class EmployeeTable extends React.Component {
                   </>
                 ))}
                 <Td>
-                  <Button colorScheme="teal">
+                  <Button colorScheme="blue">
                     View
                     {/* <Router>
                     <Link
@@ -96,12 +103,12 @@ class EmployeeTable extends React.Component {
                 <Td>
                   <Button
                     leftIcon={<DeleteIcon />}
-                    colorScheme="teal"
+                    colorScheme="red"
                     variant="solid"
                     size="md"
-                    // padding="20px"
-                    // onClick={handleDelete}
-                    // data-id={id}
+                  // padding="20px"
+                  // onClick={handleDelete}
+                  // data-id={id}
                   >
                     Delete 🔥
                   </Button>
