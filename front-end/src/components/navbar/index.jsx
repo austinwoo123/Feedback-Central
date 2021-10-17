@@ -42,7 +42,9 @@ export function Navbar(props) {
           <Button small>Get Started</Button>
         </Link>
         <Marginer direction="horizontal" margin="8px" />
-        <LoginButton medium>Login</LoginButton>
+        <Link to="/login">
+          <LoginButton medium>Login</LoginButton>
+        </Link>
         <Link to="/about">
           <LoginButton medium>About Us</LoginButton>
         </Link>
