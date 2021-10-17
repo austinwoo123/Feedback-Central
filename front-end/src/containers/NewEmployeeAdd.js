@@ -12,7 +12,8 @@ function NewEmployeePage() {
         "Content-Type": "application/json",
       },
     }).then(() => {
-      history.replace("/employees");
+      // history.replace("/employees");
+      window.location.reload();
     });
   }
 

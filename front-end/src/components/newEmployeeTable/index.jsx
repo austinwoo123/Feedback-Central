@@ -21,7 +21,7 @@ import { Textarea } from "@chakra-ui/react"
 const TableContainer = styled.div`
   width: 60%;
   border-collapse: collapse;
-  margin: 225px 300px;
+  margin: 100px 300px;
   font-size: 1.1em;
   font-family: sans-serif;
   min-width: 1000px;

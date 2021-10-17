@@ -19,7 +19,6 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0;
-  background-image: url(${BackgroundImg});
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -28,7 +27,7 @@ const PageContainer = styled.div`
 const BackgroundFilter2 = styled.div`
   width: 100%;
   height: 100%;
-  background-color: rgba(55, 55, 55, 0.89);
+  background-color: lightgrey;
   display: flex;
   flex-direction: column;
   align-items: center;

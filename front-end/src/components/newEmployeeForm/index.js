@@ -53,11 +53,11 @@ function NewEmployeeForm(props) {
       align-items="center"
       max-width="60%"
       width="1000px"
-      height="450px"
-      bg="lightblue"
+      height="475px"
+      bg="rgba(255,255,255, 0.7)"
       // p={4}
       color="black"
-      margin="100px"
+      margin="20px"
       padding="20px"
     >
       <form onSubmit={submitHandler}>
