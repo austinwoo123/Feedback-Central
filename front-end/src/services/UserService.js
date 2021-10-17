@@ -7,8 +7,8 @@ class UserService {
     return axios.get(url);
   }
 
-  deleteEmployees() {
-    return axios.delete(url);
+  deleteEmployees(id) {
+    return axios.delete(url + "/" + id);
   }
 
   addEmployees() {

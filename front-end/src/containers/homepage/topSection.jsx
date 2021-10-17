@@ -8,6 +8,7 @@ import { DownArrow } from "../../components/downArrow";
 import { Logo } from "../../components/logo";
 import { Marginer } from "../../components/marginer";
 import { Navbar } from "../../components/navbar";
+import { Link } from "react-router-dom";
 
 const TopContainer = styled.div`
   width: 100%;
@@ -62,7 +63,9 @@ export function TopSection(props) {
             Always Remind Your Team of Their Greatness
           </MotivationalText>
           <Marginer direction="vertical" margin="2em" />
-          <Button>Let's Get Started</Button>
+          <Link to="/employees">
+            <Button>Get Started</Button>
+          </Link>
           <DownArrowContainer onClick={scrollToNextSection}>
             <DownArrow />
           </DownArrowContainer>

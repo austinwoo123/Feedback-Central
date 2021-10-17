@@ -1,0 +1,55 @@
+.Email {
+  text-align: center;
+  max-width: 300px;
+  margin-left: 800px;
+  color: white;
+  margin-top: -550px;
+}
+
+/* Form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: -300px;
+} */
+.Developers {
+  position: relative;
+  top: -250px;
+  right: 450px;
+}
+.Developers2 {
+  position: relative;
+  top: -435px;
+  right: -420px;
+}
+.DevHeader {
+  margin-top: -50px;
+  font-weight: bold;
+  font-size: 25px;
+  font-style: italic;
+}
+.DevHeader2 {
+  font-weight: bold;
+  font-size: 25px;
+  font-style: italic;
+}
+.Dev1 {
+  position: relative;
+  top: 100px;
+  left: 450px;
+}
+.Dev2 {
+  position: relative;
+  top: 0.1px;
+  left: 575px;
+}
+.Dev3 {
+  position: relative;
+  top: -200px;
+  left: 850px;
+}
+.Dev4 {
+  position: relative;
+  top: -400px;
+  left: 150px;
+}

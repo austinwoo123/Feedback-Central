@@ -1,4 +1,4 @@
-import NewEmployeeForm from "../EmployeeInput";
+import NewEmployeeForm from "../../src/components/newEmployeeForm";
 import { useHistory } from "react-router";
 
 function NewEmployeePage() {
@@ -12,13 +12,13 @@ function NewEmployeePage() {
         "Content-Type": "application/json",
       },
     }).then(() => {
-      history.replace("/");
+      // history.replace("/employees");
+      window.location.reload();
     });
   }
 
   return (
     <section>
-      <h1>Add New Employee</h1>
       <NewEmployeeForm onEmployeeAdd={addEmployeeHandler} />
     </section>
   );
