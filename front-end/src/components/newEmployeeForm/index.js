@@ -58,7 +58,7 @@ function NewEmployeeForm(props) {
       width="1000px"
       height="300px"
       bg="#F5F5DC"
-      // p={4}
+      p={4}
       color="black"
       margin="50px"
     >

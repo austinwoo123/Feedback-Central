@@ -40,6 +40,7 @@ export function Navbar(props) {
         <Button small>Get Started</Button>
         <Marginer direction="horizontal" margin="8px" />
         <LoginButton small>Login</LoginButton>
+        <LoginButton small>About Us</LoginButton>
       </AccessibilityContainer>
     </NavbarContainer>
   );

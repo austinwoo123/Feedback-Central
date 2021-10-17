@@ -4,6 +4,8 @@ import NewEmployeeForm from "../../components/newEmployeeForm";
 import EmployeeTable from "../../components/newEmployeeTable";
 import BackgroundImg from "../../assets/pictures/Fist-Bumps.jpg";
 import NewEmployeePage from "../NewEmployeeAdd";
+import { Navbar } from "../../components/navbar";
+
 // import Footer from "../../components/footer";
 // import { Marginer } from "../../components/marginer";
 // import { MoreAboutSection } from "./moreAboutSection";
@@ -36,6 +38,7 @@ export function EmployeePage(props) {
   return (
     <PageContainer>
       <BackgroundFilter2>
+        <Navbar />
         <NewEmployeePage />
         <EmployeeTable />
 

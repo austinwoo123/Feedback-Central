@@ -33,7 +33,6 @@ const TableContainer = styled.div`
   color: #ffffff;
   text-align: left;
   padding: 12px 15px;
-  border-bottom: 1px solid #dddddd;
 `;
 
 class EmployeeTable extends React.Component {
