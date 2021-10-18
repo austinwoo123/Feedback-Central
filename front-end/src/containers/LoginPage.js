@@ -13,7 +13,7 @@ const PageContainer = styled.div`
   padding: 0;
   position: relative;
   background-size: cover;
-  background: lightgrey;
+  background: lightblue;
 `;
 
 export const Box = styled.div`
