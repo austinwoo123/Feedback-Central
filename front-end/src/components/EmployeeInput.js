@@ -9,6 +9,8 @@ import {
   Input,
   Textarea,
 } from "@chakra-ui/react";
+import { createBreakpoints } from "@chakra-ui/theme-tools"
+const breakpoints = ["0em", "30em", "48em", "62em", "80em", "96em"]
 
 function NewEmployeeForm(props) {
   const firstNameInputRef = useRef();

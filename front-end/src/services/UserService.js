@@ -11,6 +11,10 @@ class UserService {
     return axios.delete(url + "/" + id);
   }
 
+  updateEmployee(id) {
+    return axios.put(url + "/" + id);
+  }
+  
   addEmployees() {
     return axios.post(url);
   }

@@ -7,43 +7,71 @@ label {
 }
 
 input {
-  background-color: rgba(138, 138, 146, 0.11);
+  
+  border: 2px solid teal;
+  border-radius: 7px;
 }
 
 .button {
-  font-size: large;
-  background-color: rgba(221, 12, 12, 0.753);
-  margin-left: 45rem;
-  width: 100px;
-  height: 70px;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+  box-sizing: border-box;
+  color: teal;
+  cursor: pointer;
+  display: inline-flex;
+  flex: 1 1 auto;
+  font-family: Inter, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 1rem 1.2rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 300px;
+  margin-top: 20px;
+}
+
+.button:hover {
+  box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
 }
 
 .firstName {
   margin-top: 3rem;
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .lastName {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .department {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .positiveNote {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .needImprovement {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 .notes {
   margin-bottom: 1rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }

@@ -6,13 +6,13 @@
   margin-top: -550px;
 }
 
-/* Form {
+Form {
   border: 1px solid lightgray;
   border-radius: 10px;
   padding: 20px;
   margin-top: -300px;
-} */
-.Developers {
+}
+/* .Developers {
   position: relative;
   top: -250px;
   right: 450px;
@@ -21,7 +21,7 @@
   position: relative;
   top: -435px;
   right: -420px;
-}
+} */
 .DevHeader {
   margin-top: -50px;
   font-weight: bold;

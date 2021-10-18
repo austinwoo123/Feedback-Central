@@ -5,9 +5,13 @@ import { EmployeePage } from "./containers/employeePage";
 import About from "./containers/aboutPage";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginPage from "./containers/LoginPage";
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+const queryClient = new QueryClient();
 
 function App(props) {
   return (
+    <QueryClientProvider client={queryClient}>
     <Router>
       <div>
         <Switch>
@@ -18,6 +22,7 @@ function App(props) {
         </Switch>
       </div>
     </Router>
+    </QueryClientProvider>
   );
 }
 
