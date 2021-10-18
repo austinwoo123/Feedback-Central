@@ -54,7 +54,7 @@ function NewEmployeeForm(props) {
       max-width="60%"
       width="1000px"
       height="475px"
-      bg="rgba(255,255,255, 0.7)"
+      bg="rgba(255,255,255, 0.8)"
       // p={4}
       color="black"
       margin="20px"
@@ -62,7 +62,7 @@ function NewEmployeeForm(props) {
     >
       <form onSubmit={submitHandler}>
         <div className="firstName">
-          <label htmlFor="title">First Name:</label>
+          <strong> <label htmlFor="title">First Name:</label></strong>
           <input
             className="inputField"
             type="text"
@@ -72,11 +72,11 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="lastName">
-          <label htmlFor="title">Last Name:</label>
+          <strong> <label htmlFor="title">Last Name: </label> </strong>
           <input type="text" required id="lastName" ref={lastNameInputRef} />
         </div>
         <div className="department">
-          <label htmlFor="title">Department:</label>
+          <strong> <label htmlFor="title">Department: </label></strong>
           <input
             type="text"
             required
@@ -85,7 +85,7 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="positiveNote">
-          <label htmlFor="title">Positive Notes:</label>
+          <strong><label htmlFor="title">Positive Notes:</label></strong>
           <input
             type="text"
             required
@@ -95,7 +95,7 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="needImprovement">
-          <label htmlFor="title">Needs Improvement Notes:</label>
+          <strong><label htmlFor="title">Needs Improvement Notes:</label></strong>
           <input
             type="text"
             required
@@ -104,7 +104,7 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="notes">
-          <label htmlFor="title">Notes:</label>
+          <strong><label htmlFor="title">Notes: </label></strong>
           <input
             className="noteInput"
             type="text"
