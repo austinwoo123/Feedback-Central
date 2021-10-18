@@ -7,7 +7,7 @@ import NewEmployeePage from "../NewEmployeeAdd";
 import { Navbar } from "../../components/navbar";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";
-import BackgroundImg2 from "../../assets/pictures/gradient-grey-blue-linear-1920x1080-c2-808080-afeeee-a-60-f-14.png"
+import BackgroundImg2 from "../../assets/pictures/teal.png"
 
 const PageContainer = styled.div`
   width: 100%;

@@ -86,9 +86,9 @@ class EmployeeTable extends React.Component {
                   colorScheme="teal"
                   variant="solid"
                   size="md"
-                  // padding="20px"
-                  // onClick={handleDelete}
-                  // data-id={id}
+                // padding="20px"
+                // onClick={handleDelete}
+                // data-id={id}
                 >
                   Delete 🔥
                 </Button>
