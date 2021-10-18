@@ -53,11 +53,11 @@ function NewEmployeeForm(props) {
       flex-direction="column"
       align-items="center"
       max-width="60%"
-      width="1000px"
+      width="800px"
       height="475px"
-      bg="rgba(255,255,255, 0.8)"
+      bg="rgba(0,181,173,0.3)"
       // p={4}
-      color="black"
+      color="white"
       margin="20px"
       padding="20px"
     >
@@ -104,6 +104,7 @@ function NewEmployeeForm(props) {
             id="positiveNote"
             ref={positiveNoteInputRef}
             size="sm"
+
           />
         </div>
         <div className="needImprovement">

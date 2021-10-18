@@ -36,7 +36,6 @@ function LoginPage() {
         <div>
           <Form />
         </div>
-
         <Box>
           <Footer position="fixed" />
         </Box>

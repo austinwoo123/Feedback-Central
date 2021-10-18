@@ -25,11 +25,10 @@ const TableContainer = styled.div`
   font-size: 1.1em;
   font-family: sans-serif;
   min-width: 1000px;
-  background-color: white;
+  background-color: rgba(255,255,255, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
   color: black;
   padding: 15px 20px;
   border-bottom: 1px solid #dddddd;

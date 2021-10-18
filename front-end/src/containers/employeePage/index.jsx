@@ -7,6 +7,7 @@ import NewEmployeePage from "../NewEmployeeAdd";
 import { Navbar } from "../../components/navbar";
 import Footer from "../../components/Footer";
 import Sidebar from "../../components/Sidebar";
+import BackgroundImg2 from "../../assets/pictures/abstract-gradient-teal-to-white-sq-format-thomas-woolworth.jpg"
 
 const PageContainer = styled.div`
   width: 100%;
@@ -26,7 +27,7 @@ const BackgroundFilter2 = styled.div`
   flex-direction: column;
   align-items: center;
   background-size: cover;
-  background-image: url(${BackgroundImg});
+  background-image: url(${BackgroundImg2});
 `;
 
 export function EmployeePage(props) {
@@ -38,7 +39,7 @@ export function EmployeePage(props) {
         <NewEmployeePage />
         <EmployeeTable />
       </BackgroundFilter2>
-      <Footer />
+
     </PageContainer>
   );
 }
