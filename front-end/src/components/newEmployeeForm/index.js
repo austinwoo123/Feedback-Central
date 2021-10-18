@@ -53,7 +53,7 @@ function NewEmployeeForm(props) {
       flex-direction="column"
       align-items="center"
       max-width="60%"
-      width="1000px"
+      width="800px"
       height="475px"
       bg="rgba(255,255,255, 0.8)"
       // p={4}
@@ -108,7 +108,7 @@ function NewEmployeeForm(props) {
         </div>
         <div className="needImprovement">
           <strong>
-            <label htmlFor="title">Needs Improvement Notes:</label>
+            <label htmlFor="title">Oppurtunities:</label>
           </strong>
           <input
             type="text"
@@ -119,7 +119,7 @@ function NewEmployeeForm(props) {
         </div>
         <div className="notes">
           <strong>
-            <label htmlFor="title">Notes: </label>
+            <label htmlFor="title">Other: </label>
           </strong>
           <input
             className="noteInput"
