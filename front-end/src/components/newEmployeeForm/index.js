@@ -45,6 +45,7 @@ function NewEmployeeForm(props) {
     console.log(employeeData);
     props.onEmployeeAdd(employeeData);
   }
+
   return (
     <Box
       borderRadius="25px"
@@ -62,7 +63,10 @@ function NewEmployeeForm(props) {
     >
       <form onSubmit={submitHandler}>
         <div className="firstName">
-          <strong> <label htmlFor="title">First Name:</label></strong>
+          <strong>
+            {" "}
+            <label htmlFor="title">First Name:</label>
+          </strong>
           <input
             className="inputField"
             type="text"
@@ -72,11 +76,17 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="lastName">
-          <strong> <label htmlFor="title">Last Name: </label> </strong>
+          <strong>
+            {" "}
+            <label htmlFor="title">Last Name: </label>{" "}
+          </strong>
           <input type="text" required id="lastName" ref={lastNameInputRef} />
         </div>
         <div className="department">
-          <strong> <label htmlFor="title">Department: </label></strong>
+          <strong>
+            {" "}
+            <label htmlFor="title">Department: </label>
+          </strong>
           <input
             type="text"
             required
@@ -85,7 +95,9 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="positiveNote">
-          <strong><label htmlFor="title">Positive Notes:</label></strong>
+          <strong>
+            <label htmlFor="title">Positive Notes:</label>
+          </strong>
           <input
             type="text"
             required
@@ -95,7 +107,9 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="needImprovement">
-          <strong><label htmlFor="title">Needs Improvement Notes:</label></strong>
+          <strong>
+            <label htmlFor="title">Needs Improvement Notes:</label>
+          </strong>
           <input
             type="text"
             required
@@ -104,7 +118,9 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="notes">
-          <strong><label htmlFor="title">Notes: </label></strong>
+          <strong>
+            <label htmlFor="title">Notes: </label>
+          </strong>
           <input
             className="noteInput"
             type="text"
