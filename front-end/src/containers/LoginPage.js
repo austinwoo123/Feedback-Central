@@ -35,15 +35,15 @@ const PageContainer = styled.div`
 // `;
 
 function LoginPage() {
-    return (
-        <>
-            {/* <PageContainer> */}
-            <Navbar />
-            <Form />
-            <Footer />
-            {/* </PageContainer> */}
-        </>
+  return (
+    <>
+      {/* <PageContainer> */}
+      <Navbar />
+      <Form />
+      <Footer />
+      {/* </PageContainer> */}
+    </>
 
-    );
+  );
 }
 export default LoginPage;

@@ -7,7 +7,9 @@ label {
 }
 
 input {
-  background-color: rgba(138, 138, 146, 0.11);
+  
+  border: 2px solid teal;
+  border-radius: 7px;
 }
 
 .button {
@@ -16,7 +18,7 @@ input {
   border-radius: 12px;
   box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
   box-sizing: border-box;
-  color: #121212;
+  color: teal;
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
@@ -36,7 +38,7 @@ input {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-left: 100px;
+  margin-left: 300px;
   margin-top: 20px;
 }
 
@@ -47,29 +49,29 @@ input {
 .firstName {
   margin-top: 3rem;
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .lastName {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .department {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .positiveNote {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 
 .needImprovement {
   margin-bottom: 2rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
 .notes {
   margin-bottom: 1rem;
-  margin-left: 3rem;
+  margin-left: 13rem;
 }
