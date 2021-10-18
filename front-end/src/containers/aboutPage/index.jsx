@@ -16,12 +16,25 @@ import {
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
 import Footer from "../../components/Footer";
 import { Navbar } from "../../components/navbar";
+import styled from "styled-components";
+
 
 // interface FeatureProps {
 //   title: string;
 //   text: string;
 //   icon: ReactElement;
 // }
+
+// const BackgroundFilter2 = styled.div`
+//   // width: 100%;
+//   // height: 100%;
+//   // background-color: lightgrey;
+//   // display: flex;
+//   // flex-direction: column;
+//   // align-items: center;
+//   // background-size: cover;
+//   background-image: url(${BackgroundImg2});
+// `;
 
 const Feature = ({ title, text, icon }) => {
   return (

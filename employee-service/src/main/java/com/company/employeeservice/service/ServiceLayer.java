@@ -53,4 +53,27 @@ public class ServiceLayer {
 
         return viewModel;
     }
+
+    @Transactional
+    public void updateEmployee(EmployeeViewModel viewModel) {
+
+        // Update the employee information
+        Employee employee = new Employee();
+        employee.setId(viewModel.getId());
+        employee.setFirstName(viewModel.getFirstName());
+        employee.setLastName(viewModel.getLastName());
+        employee.setDepartment(viewModel.getDepartment());
+
+        employeeDao.save(employee);
+
+        // We don't know if any notes have been removed so delete all associated notes
+        // and then associate the notes in the viewModel with the employee
+        List<Notes> notesList = notesDao.findByEmployeeId(viewModel.getId());
+        notesList.stream()
+                .forEach(n ->
+                {
+                    n.setEmployeeId(viewModel.getId());
+                    n = notesDao.save(n);
+                });
+    }
 }
