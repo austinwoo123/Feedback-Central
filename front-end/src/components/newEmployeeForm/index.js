@@ -109,7 +109,7 @@ function NewEmployeeForm(props) {
         </div>
         <div className="needImprovement">
           <strong>
-            <label htmlFor="title">Needs Improvement Notes:</label>
+            <label htmlFor="title">Oppurtunities:</label>
           </strong>
           <input
             type="text"
@@ -120,7 +120,7 @@ function NewEmployeeForm(props) {
         </div>
         <div className="notes">
           <strong>
-            <label htmlFor="title">Notes: </label>
+            <label htmlFor="title">Other: </label>
           </strong>
           <input
             className="noteInput"
