@@ -23,7 +23,7 @@ export const SidebarData = [
   },
   {
     title: 'Employees',
-    path: '/employeess',
+    path: '/employees',
     icon: <IoIcons.IoMdPeople />
   },
   {
@@ -39,18 +39,6 @@ export const SidebarData = [
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
 
-    subNav: [
-      {
-        title: 'Message 1',
-        path: '/messages/message1',
-        icon: <IoIcons.IoIosPaper />
-      },
-      {
-        title: 'Message 2',
-        path: '/messages/message2',
-        icon: <IoIcons.IoIosPaper />
-      }
-    ]
   },
   {
     title: 'Support',
