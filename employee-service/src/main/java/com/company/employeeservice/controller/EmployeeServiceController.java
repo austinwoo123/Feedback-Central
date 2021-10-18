@@ -65,15 +65,15 @@ public class EmployeeServiceController {
 
     @PutMapping(value = "/employee/{id}")
     @ResponseStatus(value= HttpStatus.NO_CONTENT)
-    public void updateEmployee(@RequestBody Employee employee, @PathVariable int id) {
-        if(employee.getId() == null) {
-            employee.setId(id);
+    public void updateEmployee(@RequestBody EmployeeViewModel viewModel, @PathVariable int id) {
+        if(viewModel.getId() == null) {
+            viewModel.setId(id);
         }
 
-        if(employee.getId() != id) {
+        if(viewModel.getId() != id) {
             throw new IllegalArgumentException("Employee ID must match parameter given");
         }
-        employeeRepo.save(employee);
+        serviceLayer.updateEmployee(viewModel);
     }
 
 
