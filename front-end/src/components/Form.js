@@ -40,7 +40,7 @@ export default function Login() {
            }>Google</Button> */}
       <FormControl color={isDark ? "gray.50" : "blue.700"} id="email">
         {/* <FormLabel textAlign="center">Password</FormLabel> */}
-        <Input borderColor="blue.700" type="text" placeholder="Username" />
+        <Input left="46rem" width="30%" align="center" borderColor="blue.700" type="text" placeholder="Username" />
       </FormControl>
       <FormControl
         top=".1rem"
@@ -48,10 +48,10 @@ export default function Login() {
         id="email"
       >
         {/* <FormLabel textAlign="center">Password</FormLabel> */}
-        <Input borderColor="blue.700" type="password" placeholder="Password" />
+        <Input left="46rem" width="30%" borderColor="blue.700" type="password" placeholder="Password" />
 
         <Button
-          top="1rem"
+          top="5rem"
           width="100px"
           left="6rem"
           colorScheme="teal"
@@ -61,7 +61,7 @@ export default function Login() {
           Login
         </Button>
         <Button
-          top="1rem"
+          top="5rem"
           width="100px"
           left="7rem"
           colorScheme="teal"

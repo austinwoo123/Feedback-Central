@@ -2,16 +2,18 @@ import React from 'react';
 import Form from "../components/Form";
 import Footer from '../components/Footer';
 import styled from "styled-components";
+import { Navbar } from '../components/navbar';
 
 
 const PageContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0;
   position: relative;
   background-size: cover;
+  background: lightgrey;
 `;
 
 export const Box = styled.div`
@@ -27,17 +29,19 @@ export const Box = styled.div`
 `;
 
 function LoginPage() {
-    return (
-        <>
-            <PageContainer>
-                <div>
-                    <Form />
-                </div>
-                <Box>
-                    <Footer position="fixed" />
-                </Box>
-            </PageContainer>
-        </>
-    );
+  return (
+    <>
+      <PageContainer>
+        <Navbar />
+        <div>
+          <Form />
+        </div>
+
+        <Box>
+          <Footer position="fixed" />
+        </Box>
+      </PageContainer>
+    </>
+  );
 }
 export default LoginPage;
