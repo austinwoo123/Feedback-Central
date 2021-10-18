@@ -55,9 +55,9 @@ function NewEmployeeForm(props) {
       max-width="60%"
       width="800px"
       height="475px"
-      bg="rgba(0,181,173,0.3)"
+      bg="rgba(0,181,173,0.4)"
       // p={4}
-      color="white"
+      color="black"
       margin="20px"
       padding="20px"
     >
