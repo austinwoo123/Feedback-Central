@@ -3,6 +3,7 @@ import Form from "../components/Form";
 import Footer from '../components/Footer';
 import styled from "styled-components";
 import { Navbar } from '../components/navbar';
+import BackgroundImg2 from "../../src/assets/pictures/gradient-grey-blue-linear-1920x1080-c2-808080-afeeee-a-60-f-14.png"
 
 
 
@@ -18,6 +19,17 @@ const PageContainer = styled.div`
   position: relative;
   background-size: cover;
   background: lightblue;
+`;
+
+const BackgroundFilter2 = styled.div`
+  // width: 100%;
+  // height: 100%;
+  // background-color: lightgrey;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // background-size: cover;
+  background-image: url(${BackgroundImg2});
 `;
 
 // export const Box = styled.div`
@@ -38,9 +50,11 @@ function LoginPage() {
   return (
     <>
       {/* <PageContainer> */}
-      <Navbar />
-      <Form />
-      <Footer />
+      <BackgroundFilter2>
+        <Navbar />
+        <Form />
+        <Footer />
+      </BackgroundFilter2>
       {/* </PageContainer> */}
     </>
 
