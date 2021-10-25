@@ -37,10 +37,6 @@ function NewEmployeeForm(props) {
           note: enteredNote,
         },
       ],
-      // postives: enteredPositive,
-      // needImprovement: enteredNeedImprovement,
-      // note: enteredNote,
-      // description: enteredDescription
     };
     console.log(employeeData);
     props.onEmployeeAdd(employeeData);
@@ -63,7 +59,6 @@ function NewEmployeeForm(props) {
     >
       <form onSubmit={submitHandler}>
         <div className="firstName">
-
           <label htmlFor="title">First Name:</label>
           <input
             className="inputField"
@@ -74,15 +69,11 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="lastName">
-
-
           <label htmlFor="title">Last Name: </label>
 
           <input type="text" required id="lastName" ref={lastNameInputRef} />
         </div>
         <div className="department">
-
-
           <label htmlFor="title">Department: </label>
           <input
             type="text"
@@ -92,7 +83,6 @@ function NewEmployeeForm(props) {
           />
         </div>
         <div className="positiveNote">
-
           <label htmlFor="title">Positive Notes:</label>
 
           <input
@@ -101,11 +91,9 @@ function NewEmployeeForm(props) {
             id="positiveNote"
             ref={positiveNoteInputRef}
             size="sm"
-
           />
         </div>
         <div className="needImprovement">
-
           <label htmlFor="title">Needs Improvement:</label>
 
           <input
