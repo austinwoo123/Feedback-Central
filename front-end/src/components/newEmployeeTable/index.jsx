@@ -16,8 +16,8 @@ import {
 } from "@chakra-ui/react";
 import { useQuery, useQueryClient, useMutation } from "react-query";
 import UserService from "../../services/UserService";
-import { Textarea } from "@chakra-ui/react"
-import EditableText from './EditableText';
+import { Textarea } from "@chakra-ui/react";
+import EditableText from "./EditableText";
 import { assertPipelineTopicExpression } from "@babel/types";
 import api from "../../api";
 
@@ -28,7 +28,7 @@ const TableContainer = styled.div`
   font-size: 1.1em;
   font-family: sans-serif;
   min-width: 1000px;
-  background-color: rgba(255,255,255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,13 +38,6 @@ const TableContainer = styled.div`
 `;
 
 const EmployeeTable = () => {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     employees: [],
-  //   };
-  // }
-
   const [employees, setEmployees] = useState([]);
 
   const firstNameInputRef = useRef();
@@ -54,58 +47,11 @@ const EmployeeTable = () => {
   const needsImprovementNoteInputRef = useRef();
   const noteInputRef = useRef();
 
-  // componentDidMount() {
-  //   UserService.getEmployees().then((response) => {
-  //     this.setState({ employees: response.data });
-  //   });
-  // }
-
   useEffect(() => {
     UserService.getEmployees().then((response) => {
       setEmployees(response.data);
     });
   }, []);
-
-  // function updateEmployee(employeeData) {
-  //   const url = "http://localhost:7979/employee" + employeeData.id;
-  //   fetch(url, {
-  //     method: "PUT",
-  //     body: JSON.stringify(employeeData),
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //   }).then(() => {
-  //     window.location.reload();
-  //   });
-  // }
-
-  // function handleUpdate(id) {
-  //   const enteredFirstName = firstNameInputRef.value;
-  //   const enteredLastName = lastNameInputRef.value;
-  //   const enteredDepartment = departmentInputRef.value;
-  //   const enteredPositive = positiveNoteInputRef.value;
-  //   const enteredNeedImprovement = needsImprovementNoteInputRef.value;
-  //   const enteredNote = noteInputRef.value;
-  //   const employeeData = {
-  //     id: id,
-  //     firstName: enteredFirstName,
-  //     lastName: enteredLastName,
-  //     department: enteredDepartment,
-  //     notes: [
-  //       {
-  //         positives: enteredPositive,
-  //         needImprovement: enteredNeedImprovement,
-  //         note: enteredNote,
-  //       },
-  //     ],
-  //     // postives: enteredPositive,
-  //     // needImprovement: enteredNeedImprovement,
-  //     // note: enteredNote,
-  //     // description: enteredDescription
-  //   };
-  //   console.log(employeeData);
-  //   updateEmployee(employeeData)
-  // }
 
   const updateEmployee = useMutation(({ payload, id }) =>
     api.update(payload, id)
@@ -113,11 +59,7 @@ const EmployeeTable = () => {
 
   function handleUpdate(event) {
     const updatedEmployee = {
-      ...employees.find(
-        ({ id }) =>
-          id ===
-          Number(event.target.dataset.id)
-      ),
+      ...employees.find(({ id }) => id === Number(event.target.dataset.id)),
       ...{ [event.target.dataset.key]: event.target.value },
     };
 
@@ -213,18 +155,7 @@ const EmployeeTable = () => {
                 </>
               ))}
               <Td>
-                <Button colorScheme="blue">
-                  View
-                  {/* <Router>
-                    <Link
-                      to="/view"
-                      className="nav-link active"
-                      href="./pages/View"
-                    >
-                      View
-                    </Link>
-                  </Router> */}
-                </Button>
+                <Button colorScheme="blue">View</Button>
               </Td>
               <Td>
                 <Button
@@ -233,9 +164,6 @@ const EmployeeTable = () => {
                   variant="solid"
                   size="md"
                   onClick={() => handleDelete(Employee.id)}
-                // padding="20px"
-                // onClick={handleDelete}
-                // data-id={id}
                 >
                   Delete 🔥
                 </Button>
@@ -254,6 +182,6 @@ const EmployeeTable = () => {
     </TableContainer>
   );
   // }
-}
+};
 
 export default EmployeeTable;
