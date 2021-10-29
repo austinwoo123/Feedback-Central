@@ -11,6 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+//A Service Layer defines an application's boundary and its set of available operations from the perspective of interfacing client layers.
+// It encapsulates the application's business logic, controlling transactions and coor-dinating responses in the implementation of its operations.
+
+// It aims at providing middleware that serves third-party value-added services and applications at a higher application layer.
 @Component
 public class ServiceLayer {
 

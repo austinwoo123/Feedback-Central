@@ -12,18 +12,23 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+//letting spring know that this is a REST controller
 @RestController
 @RefreshScope
+//fixes the cors error
 @CrossOrigin
 public class EmployeeServiceController {
 
+//The @Autowired annotation provides more fine-grained control over where and how autowiring should be accomplished.
+// The @Autowired annotation can be used to autowire bean on the setter method just like @Required annotation,
+// constructor, a property or methods with arbitrary names and/or multiple arguments.
     @Autowired
     private EmployeeRepository employeeRepo;
 
     @Autowired
     private ServiceLayer serviceLayer;
 
+//get employees to populate our table
     @GetMapping("/employee")
     @ResponseStatus(value = HttpStatus.OK)
         public List<Employee> getAllEmployees(){

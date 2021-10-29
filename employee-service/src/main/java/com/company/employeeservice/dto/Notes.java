@@ -5,19 +5,28 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import java.util.Objects;
 
+//The @Entity annotation specifies that the class is an entity and is mapped to a database table.
+// The @Table annotation specifies the name of the database table to be used for mapping
 @Entity
+//@JsonIgnoreProperties is used at class level to mark a property or list of properties to be ignored.
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "notes")
 public class Notes {
 
+//    @Id is giving each note an ID
     @Id
+//    auto-generate an id for each note
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
+
     private Integer employeeId;
     private String positives;
     private String needImprovement;
     private String note;
 
+//    regular POJO- Plain old Java object
+
+//default constructor
     public Notes() {
     }
 

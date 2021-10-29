@@ -6,18 +6,24 @@ import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
 
+//The @Entity annotation specifies that the class is an entity and is mapped to a database table.
+// The @Table annotation specifies the name of the database table to be used for mapping
 @Entity
+//@JsonIgnoreProperties is used at class level to mark a property or list of properties to be ignored.
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name="employee")
+//A Java class is not an object. However, every Java class has an instance of the Class class describing it. Those instances are objects.
 public class Employee {
-
+//    @Id is giving each note an ID
     @Id
+//     auto-generate an id for each note
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String firstName;
     private String lastName;
     private String department;
-
+//The inverse or the referencing side simply maps to the owning side. We can easily use the mappedBy attribute of
+//@OneToMany annotation to do so. ... Here, the value of mappedBy is the name of the association-mapping attribute on the owning side.
     @OneToMany(mappedBy = "employeeId", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Notes> notes;
 
@@ -28,7 +34,7 @@ public class Employee {
         this.department = department;
         this.notes = notes;
     }
-
+//default constructor
     public Employee(){
 
     }

@@ -18,6 +18,9 @@ import java.util.List;
 @RestControllerAdvice
 public class ControllerExceptionHandler {
 
+    //The @ExceptionHandler is an annotation used to handle the specific exceptions and sending the custom responses to the client. ...
+// You can define the @ExceptionHandler method to handle the exceptions as shown.
+// This method should be used for writing the Controller Advice class file.
     @ExceptionHandler(value = {MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.UNPROCESSABLE_ENTITY)
     public ResponseEntity<List<CustomErrorResponse>> newResponseErrors(MethodArgumentNotValidException e) {

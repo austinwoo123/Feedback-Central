@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+//First, the browser sends a request to the Controller. Then, the Controller interacts with the Model to send and receive data. ...
+// Finally, the View will send its final presentation to the Controller and the Controller will send that final data to the user output.
 public class EmployeeViewModel {
 
     private Integer id;
